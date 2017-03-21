@@ -1,0 +1,195 @@
+/*index.html*/
+
+
+body.application{
+    background: #000000;
+}
+
+/*NAVBAR*/
+
+.navbar{
+    font-family: Nanum Brush Script;
+    text-decoration-color: #ffffff;
+
+}
+
+.navbar-brand{
+    font-size: 36px;
+    padding-left: 70px;
+
+}
+
+.menu{
+    font-size: 24px;
+    margin-right: 70px;
+
+}
+
+.margin{
+    margin-right: 0;
+}
+
+
+/*FOOTER*/
+.footer{
+    background-color: #000;
+}
+
+/*HOME PAGE WELCOME TEXT*/
+
+.homeheader{
+    text-align: center;
+    font-family: Avenir Next;
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 85px;
+
+}
+h3.homeheader{
+    margin-bottom: 5px;
+    margin-top: 50px;
+
+
+}
+
+/*HOME PAGE BOX*/
+
+.box{
+    background-color: #252525;
+    height: 160px;
+    border-radius: 15px;
+    margin-bottom: 65px;
+}
+
+.hover{
+    border: solid 1px #00c89b;
+}
+
+
+.boxtext{
+    padding-top: 20px;
+    text-align: center;
+    font-family: Avenir Next;
+    font-size: 26px;
+    color: #ffffff;
+
+}
+
+.homepagebtn{
+    width: 250px;
+    height: 77px;
+    margin-top: 40px;
+    margin-right: 35px;
+    background-color: #4A4A4A;
+    color: #ffffff;
+    font-family: Nanum Brush Script;
+    font-size: 36px;
+    border: none;
+    -webkit-box-shadow: 5px 2px 10px 9px rgba(0,0,0,50), inset 0 0 24px 24px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 2px 10px 9px rgba(0,0,0,50), inset 0 0 24px 24px rgba(0,0,0,0.5);
+    -o-box-shadow: 5px 2px 10px 9px rgba(0,0,0,50), inset 0 0 24px 24px rgba(0,0,0,0.5);
+    box-shadow: 5px 2px 10px 9px rgba(0,0,0,50), inset 0 0 24px 24px rgba(0,0,0,0.5);
+}
+
+/*REFERENCE PAGE*/
+
+.ref{
+    font-family: Avenir Next;
+    color: #4A4A4A
+
+}
+h2{
+    font-family: Avenir Next;
+    color: #4A4A4A;
+}
+
+.ref-box{
+    width: 460px;
+    height: 680px;
+    background-color: #2A2A2A;
+    margin-bottom: 50px;
+    padding-bottom: 100px;
+}
+
+table td{
+    border: 1px solid #979797;
+    padding: 20px;
+    color: #ffffff;
+    font-family: Avenir Next;
+    font-size: 17px;
+}
+
+.table-div{
+    padding-top: 20px;
+}
+
+.animeUniverse{
+    width: 416px;
+    height: 263px;
+    object-fit: cover;
+    outline: 1px #2a2a2a solid;
+    outline-offset: -1px;
+    margin-top: 20px;
+    margin-left: 23px;
+    -webkit-box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.5);
+    -o-box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.5);
+}
+
+
+/*ABOUT PAGE*/
+
+.aboutText {
+    font-family: Avenir Next;
+    color: #ffffff;
+    margin-top: 50px;
+    padding-bottom: 100px;
+    text-shadow: 5px 2px 9px rgba(0, 200, 155, 100);
+}
+
+.animePic{
+    width: 300px;
+    height: 700px;
+    margin-top: 50px;
+    object-fit: cover;
+    -webkit-box-shadow: inset 0 25px 120px 35px rgba(0,0,0,100);
+    -moz-box-shadow: inset 0 25px 120px 35px rgba(0,0,0,100);
+    -o-box-shadow: inset 0 25px 120px 35px rgba(0,0,0,100);
+    box-shadow: inset 0 25px 120px 35px rgba(0,0,0,100);
+
+}
+
+/*DASHBOARD*/
+
+.stage{
+    background-color: #2a2a2a;
+}
+
+.list-stage{
+    height: 733px;
+}
+
+.pie-stage{
+    height: 340px;
+}
+
+.definition-stage{
+    height: 222px;
+}
+
+.generator-stage{
+    height: 486px;
+}
+
+.star-stage{
+    height: 372px;
+}
+
+.random-stage{
+    height: 240px;
+}
+
+.results-stage{
+    height: 225px;
+}

@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div class="row">
+   <div class="col-sm-8 col-lg-8">
+       <div class="aboutText">
+       <p>We understand that sometimes choosing an<br>
+           anime to watch can be a difficult process,<br>
+           exacerbated by wierd titles, foreign words and<br>
+           a sense of “I don’t know what I’m in the mood for”.
+           <br><br><br><br><br>
+           Anime Dashboard stats can help you choose something<br>
+           totally awsome to watch without having to ponder over<br>
+           lengthy synopsises,confusing titles or even think too<br>
+           much about what it is you are *truly* in the mood for.
+           <br><br><br><br><br>
+           ANIME DASHBOARD focuses on three important pieces<br>
+           of data to help you out here. The first is popularity<br>
+           (the number of people who have joined the group related<br>
+           to the anime), the second is average user rating<br>
+           (the average score out of 10 each user has rated the anime),<br>
+           and the third is genre.
+           <br><br><br><br><br>
+           Anime dashboard got its data from<br>
+           https://www.kaggle.com/CooperUnion/anime-recommendations-database<br>
+           Which got it’s data from MyAnimeList.net
+           <br><br><br><br><br>
+           Definitions of genre and terminology were taken from<br>
+           google and wikepidia.
+       </p>
+       </div>
+   </div>
+
+    <div class="col-sm-4 col-lg-4">
+        <div class="aboutImg">
+            <img class="animePic" src="{{ url_for ('static', filename='assets/anime-pic.jpg')}}">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
