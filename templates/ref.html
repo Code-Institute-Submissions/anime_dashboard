@@ -3,72 +3,73 @@
     <!--REFERENCE TITLE-->
 
     <div class="row">
-        <div class="col-lg-3 ref">
+        <div class="col-lg-3">
             <h1><strong>Reference</strong></h1>
         </div>
     </div>
 
-    <!--BOX TITLES-->
-    <div class="row">
-        <div class="col-sm-6 col-lg-6">
-            <h2><strong>Terminology</strong></h2>
-        </div>
-        <div class="col-sm-6 col-lg-6">
-            <h2><strong>Genre List</strong></h2>
-        </div>
-    </div>
 
     <!--TERMINOLOGY BOX-->
     <div class="row">
          <div class="col-sm-6 col-lg-6">
-            <div class="ref-box">
-                <!--PUT TERMINOLOGY LIST HERE-->
-                <div class="table-div">
-                <table frame="void">
-                    <tbody>
-                    <tr>
-                        <td class="td">ANIME</td>
-                        <td>A style of Japanese film and<br>
-                            television animation, typically<br>
-                            aimed at adults as well as children.</td>
-                    </tr>
-                     <tr>
-                        <td class="td">OVA</td>
-                        <td>Original Video Animation.<br>
-                            Animated films and series, made<br>
-                            specifically for home release <br>
-                            without prior showings on television<br>
-                            or in theatres.
-                    </tr>
-                     <tr>
-                        <td class="td">SPECIAL</td>
-                        <td>Specials are usually stand alone<br>
-                            episodes from a TV show. They might<br>
-                            feature popular characters from<br>
-                            other shows in colaboration. They <br>
-                            might also be shorter or longer than<br>
-                            a regular episode.
-                    </tr>
-                    </tbody>
-                </table>
+             <div class="ref-wrapper">
+                 <h2><strong>Terminology</strong>
+                 </h2>
+                 <div class="ref-box">
+                     <div class="table-box">
+                     <div class="table-div">
+                     <table frame="void">
+                        <tbody>
+                        <tr>
+                            <td class="td">ANIME</td>
+                            <td>A style of Japanese film and<br>
+                                television animation, typically<br>
+                                aimed at adults as well as children.</td>
+                        </tr>
+                         <tr>
+                            <td class="td">OVA</td>
+                            <td>Original Video Animation.<br>
+                                Animated films and series, made<br>
+                                specifically for home release <br>
+                                without prior showings on television<br>
+                                or in theatres.
+                        </tr>
+                         <tr>
+                            <td class="td">SPECIAL</td>
+                            <td>Specials are usually stand alone<br>
+                                episodes from a TV show. They might<br>
+                                feature popular characters from<br>
+                                other shows in colaboration. They <br>
+                                might also be shorter or longer than<br>
+                                a regular episode.
+                        </tr>
+                        </tbody>
+                    </table>
+                     </div>
+                    </div>
                 </div>
-            </div>
+             </div>
          </div>
 
     <!--GENRE LIST BOX-->
          <div class="col-sm-6 col-lg-6">
-            <div class="ref-box">
-                <img class="animeUniverse" src="{{ url_for ('static', filename='assets/anime-universe.jpg')}}">
-                <!--PUT GENRE LIST HERE-->
-                 <div class="col-sm-6 col-lg-6">
-                     <div class="genre-list-wrapper">
+             <div class="ref-wrapper">
 
-                     <div class="genre-list-stage stage">
-                        <div id="genre-list"></div>
-                     </div>
-                     </div>
-    </div>
-            </div>
+                 <h2><strong>Genre List</strong></h2>
+
+                <div class="ref-box">
+                    <div class="img-box">
+                    <img class="animeUniverse" src="{{ url_for ('static', filename='assets/anime-universe.jpg')}}">
+                    </div>
+                <!--PUT GENRE LIST HERE-->
+                        <div class="genre-list-wrapper">
+
+                            <div class="genre-list-stage stage">
+                                <div id="genre-list"></div>
+                            </div>
+                    </div>
+                </div>
+             </div>
          </div>
     </div>
 

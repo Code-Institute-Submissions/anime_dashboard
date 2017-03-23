@@ -42,7 +42,7 @@ def dash():
 
 
 
-@app.route("/animeData/anime")
+@app.route("/anime")
 def anime_data():
     """
     A Flask view to serve the project data from
@@ -51,7 +51,7 @@ def anime_data():
 
     # A constant that defines the record fields that we wish to retrieve.
     FIELDS = {
-        '_id': False, 'anime_id': False, 'name': True,
+        '_id': False, 'name': True,
         'genre': True, 'type': True, 'episodes': True,
         'rating': True, 'members': True
     }
@@ -62,8 +62,8 @@ def anime_data():
         # Define which collection we wish to access
         collection = conn[DBS_NAME][COLLECTION_NAME]
         # Retrieve a result set only with the fields defined in FIELDS
-        # and limit the the results to 55000
-        anime = collection.find(projection=FIELDS, limit=75000)
+
+        anime = collection.find(projection=FIELDS, limit=1000)
         # Convert anime to a list in a JSON object and return the JSON data
         return json.dumps(list(anime))
 

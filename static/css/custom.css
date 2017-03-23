@@ -1,12 +1,9 @@
 /*index.html*/
-
-
 body.application{
-    background: #000000;
+    background: #000000;            /*Set background colour for body*/
 }
 
 /*NAVBAR*/
-
 .navbar{
     font-family: Nanum Brush Script;
     text-decoration-color: #ffffff;
@@ -26,7 +23,7 @@ body.application{
 }
 
 .margin{
-    margin-right: 0;
+    margin-right: 0;                /*Set margin between menu items*/
 }
 
 
@@ -36,33 +33,27 @@ body.application{
 }
 
 /*HOME PAGE WELCOME TEXT*/
-
 .homeheader{
     text-align: center;
     font-family: Avenir Next;
     color: #ffffff;
-    font-size: 30px;
     margin-bottom: 85px;
 
 }
-h3.homeheader{
-    margin-bottom: 5px;
+h1.homeheader{
     margin-top: 50px;
-
-
 }
 
 /*HOME PAGE BOX*/
-
 .box{
-    background-color: #252525;
+    background-color: #2a2a2a;
     height: 160px;
     border-radius: 15px;
     margin-bottom: 65px;
 }
 
 .hover{
-    border: solid 1px #00c89b;
+    border: solid 1px #00c89b;      /*Jquery to highlight box borders on mouseenter*/
 }
 
 
@@ -93,16 +84,16 @@ h3.homeheader{
 
 /*REFERENCE PAGE*/
 
-.ref{
-    font-family: Avenir Next;
-    color: #4A4A4A
 
-}
-h2{
-    font-family: Avenir Next;
+
+h1 h2{
+    font-family: Avenir Next;       /*Reference page Titles*/
     color: #4A4A4A;
 }
-
+.wrapper{
+    width: 460px;
+    height: 680px;
+}
 .ref-box{
     width: 460px;
     height: 680px;
@@ -110,11 +101,15 @@ h2{
     margin-bottom: 50px;
     padding-bottom: 100px;
 }
+.img-box{
+    margin: 20px;
+    padding-top: 20px;
+}
 
 table td{
     border: 1px solid #979797;
     padding: 20px;
-    color: #ffffff;
+    color: #ffffff;                 /*Borderless Table*/
     font-family: Avenir Next;
     font-size: 17px;
 }
@@ -124,13 +119,11 @@ table td{
 }
 
 .animeUniverse{
-    width: 416px;
-    height: 263px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     outline: 1px #2a2a2a solid;
     outline-offset: -1px;
-    margin-top: 20px;
-    margin-left: 23px;
     -webkit-box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.5);
     -o-box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.5);
@@ -192,4 +185,35 @@ table td{
 
 .results-stage{
     height: 225px;
+}
+
+.list-btn{
+    background: none;
+    border: none;
+    padding: 10px 0 0 15px;
+    font-family: Helvetica;
+    color: #4a4a4a;
+    font-size: 24px;
+}
+
+.m{
+    padding-left: 35px;
+
+}
+
+.to{
+    padding-left: 25px;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 768px) {
+    .box {
+        height: 400px;
+    }
+
+    .homepagebtn{
+        margin-top: 20px;
+        margin-left: 45px;
+    }
 }
