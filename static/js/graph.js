@@ -40,26 +40,27 @@ $(document).ready(function() {
         });
 
 
-        var animeByRating = ratingDim.group().top(10);
+        var animeByRating = ratingDim.group();
         var animeByMembers = membersDim.group();
 
+        var topTen = animeByRating.top(10);
 
-        //Value for xAxis barchart
-        var bottomX = ratingDim.bottom(1)[0].value;
-        var topX = ratingDim.top(1)[0].value;
+        var bottomX = topTen[0];
+        var topX = topTen[9];
 
 
         var barChart = dc.barChart("#bar-chart")
         barChart
-            .width(250)
+            .width(280)
             .height(350)
             .margins({top: 30, right: 0, bottom: 30, left: 50})
-            .dimension(animeByRating)
+            .dimension(topTen)
             .group(animeByMembers)
             .x(d3.scale.ordinal().domain([bottomX, topX]))
             .elasticY(true)
             .xAxisLabel("Rating")
-            .yAxisLabel("Members");
+            .yAxisLabel("Members")
+            .yAxis().ticks(8);
 
 
         dc.renderAll();
