@@ -10,4 +10,6 @@ $(".box").mouseleave(function() {
         $(this).removeClass("hover");
     });
 
+
+
 });

@@ -63,7 +63,7 @@ def anime_data():
         collection = conn[DBS_NAME][COLLECTION_NAME]
         # Retrieve a result set only with the fields defined in FIELDS
 
-        anime = collection.find(projection=FIELDS, limit=1000)
+        anime = collection.find(projection=FIELDS, limit=10)
         # Convert anime to a list in a JSON object and return the JSON data
         return json.dumps(list(anime))
 

@@ -175,7 +175,7 @@ table td{
     height: 486px;
 }
 
-.star-stage{
+.bar-stage{
     height: 372px;
 }
 
@@ -203,6 +203,31 @@ table td{
 
 .to{
     padding-left: 25px;
+}
+
+rect:hover {
+    fill: #00c89b;  /* fill with a yellow */
+}
+
+#tooltip {
+    position: absolute;
+    padding: 5px 10px;
+    background: white;
+    border-radius: 3px;
+    font-family: Avenir Next;   /* we need to import this font*/
+    font-weight: bold;
+}
+
+.axis text{
+    font: 10px Avenir Next;
+    stroke: #9b9b9b;
+}
+
+.axis path,
+.axis line{
+    fill: none;
+    stroke: #9b9b9b;
+    shape-rendering: crispEdges;
 }
 
 /*MEDIA QUERIES*/
