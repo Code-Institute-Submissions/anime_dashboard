@@ -5,58 +5,70 @@
 
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-
-               <h1 class="homeheader">Welcome To Anime Dashboard, the place where you can see stats on thousands
-                   of anime titles.
-               </h1><br>
-               <h2 class="homeheader">Find your box and click the button!</h2>
+            <h1 class="homeheader">Welcome To Anime Dashboard.</h1>
+            <div class="row">
+                <div class="col-lg-10 centre">
+                    <h2 class="homeheader">Check out the interactive dashboard that let's you see info on thousands of anime
+                    titles, all on one page!
+                    </h2>
+                </div>
+            </div>
         </div>
     </div>
 
     <!--FIRST BOX WITH INSTRUCTIONS AND BUTTON THAT POINTS TO 'NEWBIE' DASHBOARD-->
     <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="col-sm-12 col-md-9 col-lg-9 centre">
             <div class="box">
-               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <p class="boxtext">If you have never seen anime,<br> or are very new to anime, click <br>the button in
-                    this box! </p>
-               </div>
-                <div class="col-xs-2 col-sm-2 col-lg-2"></div>
-                    <a href="{{ url_for('dash') }}"><button type="button" class="btn btn-default col-sm-4 col-lg-4
-                     text-left homepagebtn">NEWBIE
-                    </button></a>
+                <div class="xs-col-12 col-sm-6 col-md-6 col-lg-6">
+                    <p class="boxtext">Use the dashboard to see ratings, popularity and genre. </p>
+                </div>
+                <div class="xs-col-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="box-button centre">
+                        <a href="{{ url_for('dash') }}">
+                            <button type="button" class="btn btn-default
+                                text-left homepagebtn centre">DASHBOARD
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+
+
+
     <!--SECOND BOX WITH INSTRUCTIONS AND BUTTON THAT POINTS TO 'SEASONED' DASHBOARD-->
     <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="col-sm-12 col-md-9 col-lg-9 centre">
             <div class="box">
-               <div class="col-sm-6 col-md-6 col-lg-6">
-                <p class="boxtext">If you have seen  your fair <br>share of anime then you should <br>click the button
-                    in this box! </p>
+               <div class="xs-col-12 col-sm-6 col-md-6 col-lg-6">
+                   <div class="taxt-container">
+                        <p class="boxtext"> Learn more about
+                        anime terminology and genres here!</p>
+                   </div>
                </div>
-                <div class="col-sm-2 col-lg-2"></div>
-                    <a href="{{ url_for('dash') }}"><button type="button" class="btn btn-default col-sm-4 col-lg-4
-                     text-left homepagebtn">SEASONED
-                    </button></a>
+                <div class="xs-col-12 col-sm-6 col-md-6 col-lg-6">
+                    <a href="{{ url_for('ref') }}"><button type="button" class="btn btn-default text-left homepagebtn">REFERENCE
+                    </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
     <!--THIRD BOX WITH INSTRUCTIONS AND BUTTON THAT CHOOSES AND DISPLAYS A RANDOM ANIME-->
     <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="col-sm-12 col-md-9 col-lg-9 centre">
             <div class="box">
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                <p class="boxtext">Click the button in this box if you<br> would like us to suggest an anime<br> for
-                    you right this very moment. </p>
+                <div class="xs-col-12 col-sm-6 col-md-6 col-lg-6">
+                <p class="boxtext">This button will select an anime at random for you!
                </div>
-                <div class="col-sm-2 col-lg-2"></div>
-                    <button type="button" class="btn btn-default col-sm-4 col-lg-4 text-left homepagebtn">LUCKY DIP
+                <div class="xs-col-12 col-sm-6 col-md-6 col-lg-6">
+                    <button type="button" class="btn btn-default text-left homepagebtn">LUCKY DIP
                     </button>
-
+                </div>
             </div>
         </div>
     </div>
