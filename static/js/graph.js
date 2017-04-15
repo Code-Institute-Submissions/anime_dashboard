@@ -58,7 +58,18 @@ $(document).ready(function() {
 
         dc.renderAll();
 
-
+        //Add xAxis label to row chart taken from (http://stackoverflow.com/questions/21114336/how-to-add-axis-labels-for-row-chart-using-dc-js-or-d3-js)
+        function AddXAxis(lineChartUpdate, displayText) {
+            lineChartUpdate
+            .svg()
+            .append("text")
+            .attr("class", "x-axis-label")
+            .attr("text-anchor", "middle")
+            .attr("x", lineChartUpdate.width()/2)
+            .attr("y", lineChartUpdate.height()-3.5)
+            .text(displayText);
+        }
+        AddXAxis(lineChart, "Rating");
 
 
 
