@@ -8,63 +8,62 @@ $(document).ready(function() {
         .await(makeGraphs);
 
 
-    //Create svg width and height variables
-    //var svgWidth = 250,
-    //    svgHeight = 270;
-
-    //Create margin variable for chart
-    //var margin = {top: 50, right: 0, bottom: 50, left: 50},
-    //Apply margins to the canvas
-    //canvasWidth = svgWidth + margin.right + margin.left;
-    //canvasHeight = svgHeight + margin.top + margin.bottom;
-
-    //Create spacing
-    //var spacing = 2;
-
-    //Retrieve data
+        //Retrieve data
     function makeGraphs(error, animeData) {
 
         animeData.forEach(function (d) {
             d.rating = +d.rating;
             d.members = +d.members;
 
+
         });
         //Crossfilter Instance
         var ndx = crossfilter(animeData);
+        var size = ndx.size();
 
+        //Dimensions
         var ratingDim = ndx.dimension(function (d) {
-            return d.rating
-        });
-        var membersDim = ndx.dimension(function (d) {
-            return d.members
+            return d.rating;
         });
 
 
-        var animeByRating = ratingDim.group();
-        var animeByMembers = membersDim.group();
-
-        var topTen = animeByRating.top(10);
-
-        var bottomX = topTen[0];
-        var topX = topTen[9];
 
 
-        var barChart = dc.barChart("#bar-chart")
-        barChart
-            .width(280)
+
+
+
+        //Group data by members
+        var animeByMembers = ratingDim.group().reduceSum(function(d){return d.members});
+
+
+
+
+
+        //Line Chart
+        var lineChart = dc.lineChart("#line-chart");
+        lineChart
+            .width(860)
             .height(350)
-            .margins({top: 30, right: 0, bottom: 30, left: 50})
-            .dimension(topTen)
-            .group(animeByMembers)
-            .x(d3.scale.ordinal().domain([bottomX, topX]))
+            .margins({top: 30, right: 30, bottom: 30, left: 70})
             .elasticY(true)
-            .xAxisLabel("Rating")
-            .yAxisLabel("Members")
-            .yAxis().ticks(8);
+            .dimension(ratingDim)
+            .group(animeByMembers)
+            .renderArea(true)
+            .brushOn(true)
+            .x(d3.scale.linear().domain([0,10]))
+            .yAxisLabel("Members");
+
+
 
 
         dc.renderAll();
 
+
+
+
+
+
+        window.ratingObject = membersDim;
 
         //Assign maximum members to a variable
         /*  var maxMembers = d3.max(animeData, function(d){return d.members;});

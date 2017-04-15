@@ -3,12 +3,22 @@
  */
 $(document).ready(function() {
 
-$(".box").mouseenter(function() {
+    $(".box").mouseenter(function() {
         $(this).addClass("hover");
     });
-$(".box").mouseleave(function() {
+    $(".box").mouseleave(function() {
         $(this).removeClass("hover");
     });
+
+    $(".btn")
+
+
+//Change select menu event styles
+    $('option').on('click', function() {
+        $(this).css("background-color", 'red');
+    });
+
+
 
 
 
