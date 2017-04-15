@@ -33,7 +33,7 @@ def about():
     """
     return render_template("about.html")
 
-@app.route("/dashboard")
+@app.route("/dash")
 def dash():
     """
     A Flask view to serve the dashboard page.
@@ -44,6 +44,7 @@ def dash():
 
 @app.route("/anime")
 def anime_data():
+
     """
     A Flask view to serve the project data from
     MongoDB in JSON format.
@@ -63,9 +64,10 @@ def anime_data():
         collection = conn[DBS_NAME][COLLECTION_NAME]
         # Retrieve a result set only with the fields defined in FIELDS
 
-        anime = collection.find(projection=FIELDS, limit=10)
+        anime = collection.find(projection=FIELDS).sort([('rating', -1)])
         # Convert anime to a list in a JSON object and return the JSON data
         return json.dumps(list(anime))
+
 
 
 if __name__ == "__main__":
