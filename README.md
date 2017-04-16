@@ -10,7 +10,7 @@ It gives users the ability to look through anime titles, either by type (movie, 
 Users are also able to select specific titles in the select menu and see the correspoding data which includes genre, episodes, number
 of members in it's 'group', type and average user rating.
 
-###How does it work?
+### How does it work?
 The dashboard uses crossfilter to group data and d3/dc to render charts. Bootstrap is used for layout.
 
 ## Features
