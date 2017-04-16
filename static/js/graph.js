@@ -101,7 +101,7 @@ $(document).ready(function() {
             .showGroups(false)
             .columns([
                 {
-                    label: "Name",
+                    label: "Title:",
                     format: function(d){ return d.name}
                 }
             ]);
@@ -116,14 +116,9 @@ $(document).ready(function() {
             })
             .showGroups(false)
             .columns([
-                {
-                    label: "Genre",
-                    format: function(d){
-                        if(d.genre === "") {
-                            return "Unknown"
-                        }else{
-                            return d.genre;
-                        }},
+                 {
+                    label: "Rating:",
+                    format: function(d){ return d.rating}
                 }
             ]);
 
@@ -139,13 +134,13 @@ $(document).ready(function() {
             .showGroups(false)
             .columns([
                 {
-                    label: "Episodes",
-                    format:function(d){
-                        if (d.episodes != 1) {
-                            return d.episodes
+                    label: "Genre:",
+                    format: function(d){
+                        if(d.genre === "") {
+                            return "Unknown"
                         }else{
-                            return d.type
-                        }}
+                            return d.genre;
+                        }},
                 }
             ]);
 
@@ -160,8 +155,13 @@ $(document).ready(function() {
             .showGroups(false)
             .columns([
                 {
-                    label: "Rating",
-                    format: function(d){ return d.rating}
+                    label: "Episodes:",
+                    format:function(d){
+                        if (d.episodes != 1) {
+                            return d.episodes
+                        }else{
+                            return d.type
+                        }}
                 }
             ]);
 

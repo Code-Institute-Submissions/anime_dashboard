@@ -70,7 +70,7 @@ h2{
 }
 
 .box{
-    background: url('/static/assets/Bleach-280x800.jpg'); /*http://pantallahd.com/fondo-pantalla-bleach-anime-hd/*/
+    background: url('/static/assets/Bleach-280x800.jpg');
     height: 160px;
     border-radius: 15px;
     margin-bottom: 65px;
@@ -92,7 +92,7 @@ h2{
 }
 .hover-mid{
     transition: 5s;
-    background-position: 25% 85%;
+    background-position: 0% 85%;
 }
 .hover-bottom{
     transition: 5s;
@@ -221,10 +221,6 @@ a{
     height: 700px;
     margin-top: 50px;
     object-fit: cover;
-    -webkit-box-shadow: inset 0 25px 120px 35px rgba(0,0,0,100);
-    -moz-box-shadow: inset 0 25px 120px 35px rgba(0,0,0,100);
-    -o-box-shadow: inset 0 25px 120px 35px rgba(0,0,0,100);
-    box-shadow: inset 0 25px 120px 35px rgba(0,0,0,100);
 }
 /*ABOUT PAGE*/
 
@@ -252,22 +248,20 @@ a{
 
 .line-stage{
     height: 377px;
+
 }
 
-
-
-
 .dc-chart select{                   /*SELECT MENU STYLES*/
-    width: 480px;
+    width: 491px;
     height: 340px;
-    background-color: #2a2a2a;      /*Style the select menu container */
+    background: #2a2a2a;            /*Style the select menu container */
     border: none;
 }
 
 .dc-select-option{
     padding: 15px 10px 10px 5px;
     font: 18px Avenir Next;         /*Style select menu text*/
-    color: #9b9b9b;
+    color: #ffffff;
 }
 
 option:first-child{
@@ -277,13 +271,17 @@ option:first-child{
 
 
 .data {
-    color: #9b9b9b;                 /*DATA TABLE STYLES*/
+                                    /*DATA TABLE STYLES*/
     font: 26px Avenir Next;
+    color: #ffffff;
 }
 
+th{
+    padding: 10px;
+}
 
 td{
-    padding: 10px;
+    padding: 20px;
 
 }
 
@@ -306,7 +304,9 @@ td{
     stroke: #ffffff;
 }
 
-
+.dc-chart .selected path{
+    stroke: none;
+}
 
 
 .x-axis-label{
