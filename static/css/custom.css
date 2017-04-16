@@ -1,64 +1,113 @@
 /*index.html*/
 body.application{
-    background: #000000;            /*Set background colour for body*/
+    background: #000000       /*Set background colour for body*/
 }
 
 /*NAVBAR*/
 .navbar{
     font-family: Nanum Brush Script;
-    text-decoration-color: #ffffff;
 
 }
 
-.navbar-brand{
+.navbar-inverse .navbar-brand{
     font-size: 36px;
     padding-left: 70px;
+    color: #ffffff
+}
 
+.navbar-inverse .navbar-brand:hover {
+    text-shadow: 4px 4px 9px #00c89b;
 }
 
 .menu{
     font-size: 24px;
     margin-right: 70px;
+}
 
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+    text-shadow: 4px 4px 9px #00c89b;
 }
 
 .margin{
     margin-right: 0;                /*Set margin between menu items*/
 }
+/*NAVBAR*/
 
 
 /*FOOTER*/
 .footer{
-    background-color: #000;
-}
-
-/*HOME PAGE WELCOME TEXT*/
-.homeheader{
+    position: absolute;
+    width: 100%;
+    padding-top: 5px;
+    margin-top: 50px;
+    background-color: #222;
     text-align: center;
+    height: 100px;
+    left: 0;
+
+}
+/*FOOTER*/
+
+
+/*HOME PAGE*/
+.homeheader{
+    text-align: center;             /*HOME PAGE WELCOME TEXT*/
     font-family: Avenir Next;
     color: #ffffff;
-    margin-bottom: 85px;
-
-}
-h1.homeheader{
     margin-top: 50px;
 }
 
-/*HOME PAGE BOX*/
+h1{
+    padding-bottom: 10px;
+}
+
+h2{
+    margin-bottom: 50px;
+}
+
 .box{
-    background-color: #2a2a2a;
+    background: url('/static/assets/Bleach-280x800.jpg'); /*http://pantallahd.com/fondo-pantalla-bleach-anime-hd/*/
     height: 160px;
     border-radius: 15px;
     margin-bottom: 65px;
 }
 
-.hover{
-    border: solid 1px #00c89b;      /*Jquery to highlight box borders on mouseenter*/
+.img-top{
+    background-position: 45% 25%;   /*Position for background image in box*/
+}
+.img-middle{
+    background-position: 45% 55%;
+}
+.img-bottom{
+    background-position: 45% 85%;
 }
 
+.hover-top{
+    transition: 5s;
+    background-position: 100% 100%;  /*transition for background image in box*/
+}
+.hover-mid{
+    transition: 5s;
+    background-position: 25% 85%;
+}
+.hover-bottom{
+    transition: 5s;
+    background-position: 0% 0%;
+}
+
+.centre{
+    float: none;                    /*Put box in centre*/
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .boxtext{
-    padding-top: 20px;
+    padding-top: 40px;              /*text styles*/
+    padding-left: 50px;
     text-align: center;
     font-family: Avenir Next;
     font-size: 26px;
@@ -70,57 +119,73 @@ h1.homeheader{
     width: 250px;
     height: 77px;
     margin-top: 40px;
-    margin-right: 35px;
+    margin-left: 50px;
     background-color: #4A4A4A;
     color: #ffffff;
     font-family: Nanum Brush Script;
     font-size: 36px;
     border: none;
+    border-radius: 15px;
     -webkit-box-shadow: 5px 2px 10px 9px rgba(0,0,0,50), inset 0 0 24px 24px rgba(0,0,0,0.5);
     -moz-box-shadow: 5px 2px 10px 9px rgba(0,0,0,50), inset 0 0 24px 24px rgba(0,0,0,0.5);
     -o-box-shadow: 5px 2px 10px 9px rgba(0,0,0,50), inset 0 0 24px 24px rgba(0,0,0,0.5);
     box-shadow: 5px 2px 10px 9px rgba(0,0,0,50), inset 0 0 24px 24px rgba(0,0,0,0.5);
 }
 
+button:focus{
+    outline-color: #00c89b;
+}
+/*HOME PAGE*/
+
+
 /*REFERENCE PAGE*/
-
-
-
-h1 h2{
+.ref-header{
     font-family: Avenir Next;       /*Reference page Titles*/
-    color: #4A4A4A;
+    color: #9b9b9b;
+
 }
 .wrapper{
-    width: 460px;
-    height: 680px;
-}
-.ref-box{
-    width: 460px;
-    height: 680px;
+    height: 680px;                  /*Wrapper for boxes*/
     background-color: #2A2A2A;
     margin-bottom: 50px;
-    padding-bottom: 100px;
 }
-.img-box{
-    margin: 20px;
-    padding-top: 20px;
-}
-
-table td{
-    border: 1px solid #979797;
-    padding: 20px;
-    color: #ffffff;                 /*Borderless Table*/
-    font-family: Avenir Next;
-    font-size: 17px;
+.ref-box{
+    height: 680px;                  /*Wrapper for table*/
+    background-color: #2A2A2A;
+    margin-bottom: 50px;
+    margin-right: 10px;
+    overflow-y: scroll;
 }
 
 .table-div{
-    padding-top: 20px;
+    padding-top: 20px;              /*Table padding*/
+    padding-bottom: 20px;
+}
+
+table td{
+    border: 1px solid #979797;      /*Styles for Table*/
+    padding: 20px;
+    color: #ffffff;
+    font: 18px Avenir Next;
+}
+
+#genre-table{
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#genre-table td{
+    border: none;
+}
+
+.img-box{
+    padding: 20px 20px 0px 20px;    /*Position for image in genre box*/
 }
 
 .animeUniverse{
-    width: 100%;
-    height: 100%;
+    max-width: 100%;                    /*Styles for image*/
+    max-height: 100%;
     object-fit: cover;
     outline: 1px #2a2a2a solid;
     outline-offset: -1px;
@@ -130,15 +195,25 @@ table td{
     box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.5);
 }
 
+.genre-list{
+    padding: 20px 40px 20px 40px;
+    font-family: Avenir Next;
+    font-size: 17px;
+    color: white;
+}
+/*REFERENCE PAGE*/
+
 
 /*ABOUT PAGE*/
-
+a{
+    text-decoration: none;
+    color: #00c89b;
+}
 .aboutText {
-    font-family: Avenir Next;
+    font: 20px Avenir Next;
     color: #ffffff;
     margin-top: 50px;
-    padding-bottom: 100px;
-    text-shadow: 5px 2px 9px rgba(0, 200, 155, 100);
+    margin-right: 20px;
 }
 
 .animePic{
@@ -150,11 +225,11 @@ table td{
     -moz-box-shadow: inset 0 25px 120px 35px rgba(0,0,0,100);
     -o-box-shadow: inset 0 25px 120px 35px rgba(0,0,0,100);
     box-shadow: inset 0 25px 120px 35px rgba(0,0,0,100);
-
 }
+/*ABOUT PAGE*/
+
 
 /*DASHBOARD*/
-
 .stage{
     background-color: #2a2a2a;
 }
@@ -229,16 +304,59 @@ rect:hover {
     stroke: #9b9b9b;
     shape-rendering: crispEdges;
 }
+/*DASHBOARD*/
+
+
+
+
 
 /*MEDIA QUERIES*/
 
 @media screen and (max-width: 768px) {
     .box {
-        height: 400px;
+        height: 300px;
     }
 
-    .homepagebtn{
-        margin-top: 20px;
-        margin-left: 45px;
+    .small-centre{
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
     }
+
 }
+
+
+
+
+/* ROW CHART STYLES AND D3 CHART
+.list-btn{
+    background: none;
+    border: none;
+    padding: 10px 0 0 15px;
+    font-family: Helvetica;
+    color: #4a4a4a;
+    font-size: 24px;
+}
+
+.m{
+    padding-left: 35px;
+
+}
+
+.to{
+    padding-left: 25px;
+}
+
+rect:hover {
+    fill: #00c89b;  fill with a yellow
+}
+
+#tooltip {
+    position: absolute;
+    padding: 5px 10px;
+    background: white;
+    border-radius: 3px;
+    font-family: Avenir Next;   /* we need to import this font
+    font-weight: bold;
+}
+/*
