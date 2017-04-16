@@ -3,14 +3,27 @@
  */
 $(document).ready(function() {
 
-    $(".box").mouseenter(function() {
-        $(this).addClass("hover");
+    $(".img-top").mouseenter(function() {
+        $(this).addClass("hover-top");
     });
-    $(".box").mouseleave(function() {
-        $(this).removeClass("hover");
+    $(".img-top").mouseleave(function() {
+        $(this).removeClass("hover-top");
     });
 
-    $(".btn")
+    $(".img-middle").mouseenter(function() {
+        $(this).addClass("hover-mid");
+    });
+    $(".img-middle").mouseleave(function() {
+        $(this).removeClass("hover-mid");
+    });
+
+    $(".img-bottom").mouseenter(function() {
+        $(this).addClass("hover-bottom");
+    });
+    $(".img-bottom").mouseleave(function() {
+        $(this).removeClass("hover-bottom");
+    });
+
 
 
 //Change select menu event styles

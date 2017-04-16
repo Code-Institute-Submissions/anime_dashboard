@@ -8,34 +8,56 @@ $(document).ready(function() {
         .await(makeGraphs);
 
 
+    //Create svg width and height variables
+    //var svgWidth = 250,
+    //    svgHeight = 270;
+
+    //Create margin variable for chart
+    //var margin = {top: 50, right: 0, bottom: 50, left: 50},
+    //Apply margins to the canvas
+    //canvasWidth = svgWidth + margin.right + margin.left;
+    //canvasHeight = svgHeight + margin.top + margin.bottom;
+
+    //Create spacing
+    //var spacing = 2;
+
         //Retrieve data
     function makeGraphs(error, animeData) {
 
         animeData.forEach(function (d) {
             d.rating = +d.rating;
             d.members = +d.members;
-
-
         });
+
+
         //Crossfilter Instance
         var ndx = crossfilter(animeData);
         var size = ndx.size();
 
+
         //Dimensions
+        var membersDim = ndx.dimension(function (d) {
+            return d.members;
+        });
+
         var ratingDim = ndx.dimension(function (d) {
             return d.rating;
         });
 
+        var typeDim = ndx.dimension(function (d){
+            return d.type;
+        });
 
-
-
+        var nameDim = ndx.dimension(function (d){
+            return d.name;
+        });
 
 
 
         //Group data by members
         var animeByMembers = ratingDim.group().reduceSum(function(d){return d.members});
-
-
+        //Group data by rating
+        var animeByRating = nameDim.group().reduceSum(function(d){return d.rating});
 
 
 
@@ -54,11 +76,35 @@ $(document).ready(function() {
             .yAxisLabel("Members");
 
 
+        //Select Menu
+        var selectMenu = dc.selectMenu('#select-chart');
+        selectMenu
+            .dimension(nameDim)
+            .group(animeByRating)
+            .multiple(true)
+            .controlsUseVisibility(true)
+            .order(function(a,b){
+                return a.value > b.value ? -1 : b.value > a.value ? 1 : 0;
+            });
+
+
+        //var colourScale = d3.scale.ordinal().range(["#0a9740", "#059d39", "#136629", "#113818", "#132412"])
+        //Pie chart
+        var pieChart = dc.pieChart("#pie-chart");
+        pieChart
+            .width(220)
+            .height(220)
+            .slicesCap(6)
+            .dimension(typeDim)
+            .group(typeGroup)
+            //.colors(colourScale)
+            .legend(dc.legend().x(240).y(0).gap(5));
 
 
         dc.renderAll();
 
-        //Add xAxis label to row chart taken from (http://stackoverflow.com/questions/21114336/how-to-add-axis-labels-for-row-chart-using-dc-js-or-d3-js)
+
+        //Add xAxis label to row chart
         function AddXAxis(lineChartUpdate, displayText) {
             lineChartUpdate
             .svg()
@@ -70,8 +116,6 @@ $(document).ready(function() {
             .text(displayText);
         }
         AddXAxis(lineChart, "Rating");
-
-
 
 
         window.ratingObject = membersDim;

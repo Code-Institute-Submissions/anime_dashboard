@@ -230,71 +230,87 @@ a{
 
 
 /*DASHBOARD*/
-.stage{
-    background-color: #2a2a2a;
+.chart-title{
+    color: #9b9b9b;
 }
 
-.list-stage{
-    height: 733px;
+.stage{
+    background: #2a2a2a;
+}
+
+.table-stage{
+    height: 185px;
 }
 
 .pie-stage{
     height: 340px;
 }
 
-.definition-stage{
-    height: 222px;
+.select-stage{
+    height: 340px;
 }
 
-.generator-stage{
-    height: 486px;
+.line-stage{
+    height: 377px;
 }
 
-.bar-stage{
-    height: 372px;
-}
 
-.random-stage{
-    height: 240px;
-}
 
-.results-stage{
-    height: 225px;
-}
 
-.list-btn{
-    background: none;
+.dc-chart select{                   /*SELECT MENU STYLES*/
+    width: 480px;
+    height: 340px;
+    background-color: #2a2a2a;      /*Style the select menu container */
     border: none;
-    padding: 10px 0 0 15px;
-    font-family: Helvetica;
-    color: #4a4a4a;
-    font-size: 24px;
 }
 
-.m{
-    padding-left: 35px;
+.dc-select-option{
+    padding: 15px 10px 10px 5px;
+    font: 18px Avenir Next;         /*Style select menu text*/
+    color: #9b9b9b;
+}
+
+option:first-child{
+    background-color: #9b9b9b ;     /*style 'select all' option from select menu*/
+    color: #FFFFFF;
+}
+
+
+.data {
+    color: #9b9b9b;                 /*DATA TABLE STYLES*/
+    font: 26px Avenir Next;
+}
+
+
+td{
+    padding: 10px;
 
 }
 
-.to{
-    padding-left: 25px;
+#pie-chart{
+    margin-top: 50px;               /*PIE CHART STYLES*/
+    margin-left: 30px;
 }
 
-rect:hover {
-    fill: #00c89b;  /* fill with a yellow */
+#pie-chart svg{
+    width: 320px;
+    height: 280px;
 }
 
-#tooltip {
-    position: absolute;
-    padding: 5px 10px;
-    background: white;
-    border-radius: 3px;
-    font-family: Avenir Next;   /* we need to import this font*/
-    font-weight: bold;
+.pie-slice-group{
+    margin-top: 30px;
 }
 
-.axis text{
-    font: 10px Avenir Next;
+.pie-label{
+    font: 16px Avenir Next;
+    stroke: #ffffff;
+}
+
+
+
+
+.x-axis-label{
+    font: 15px Avenir Next;        /*line CHART STYLES*/
     stroke: #9b9b9b;
 }
 
@@ -303,6 +319,15 @@ rect:hover {
     fill: none;
     stroke: #9b9b9b;
     shape-rendering: crispEdges;
+}
+
+svg text{
+    stroke:#9b9b9b;
+}
+
+svg rect + text{
+    font: 10px Avenir Next;
+    stroke: #fff;
 }
 /*DASHBOARD*/
 
