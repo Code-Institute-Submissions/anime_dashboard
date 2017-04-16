@@ -8,19 +8,6 @@ $(document).ready(function() {
         .await(makeGraphs);
 
 
-    //Create svg width and height variables
-    //var svgWidth = 250,
-    //    svgHeight = 270;
-
-    //Create margin variable for chart
-    //var margin = {top: 50, right: 0, bottom: 50, left: 50},
-    //Apply margins to the canvas
-    //canvasWidth = svgWidth + margin.right + margin.left;
-    //canvasHeight = svgHeight + margin.top + margin.bottom;
-
-    //Create spacing
-    //var spacing = 2;
-
         //Retrieve data
     function makeGraphs(error, animeData) {
 
@@ -58,7 +45,8 @@ $(document).ready(function() {
         var animeByMembers = ratingDim.group().reduceSum(function(d){return d.members});
         //Group data by rating
         var animeByRating = nameDim.group().reduceSum(function(d){return d.rating});
-
+        //Group data by type
+        var typeGroup = typeDim.group();
 
 
         //Line Chart
@@ -99,6 +87,83 @@ $(document).ready(function() {
             .group(typeGroup)
             //.colors(colourScale)
             .legend(dc.legend().x(240).y(0).gap(5));
+
+
+        //Data table
+        var dataTableName = dc.dataTable('#data-table-chart-one');
+        dataTableName
+            .beginSlice(0)
+            .endSlice(1)
+            .dimension(ratingDim)
+            .group(function(d){
+                return 1
+            })
+            .showGroups(false)
+            .columns([
+                {
+                    label: "Name",
+                    format: function(d){ return d.name}
+                }
+            ]);
+
+        var dataTableGenre = dc.dataTable('#data-table-chart-two');
+        dataTableGenre
+            .beginSlice(0)
+            .endSlice(1)
+            .dimension(ratingDim)
+            .group(function(d){
+                return 1
+            })
+            .showGroups(false)
+            .columns([
+                {
+                    label: "Genre",
+                    format: function(d){
+                        if(d.genre === "") {
+                            return "Unknown"
+                        }else{
+                            return d.genre;
+                        }},
+                }
+            ]);
+
+
+        var dataTableEp = dc.dataTable('#data-table-chart-three');
+        dataTableEp
+            .beginSlice(0)
+            .endSlice(1)
+            .dimension(ratingDim)
+            .group(function(d){
+                return 1
+            })
+            .showGroups(false)
+            .columns([
+                {
+                    label: "Episodes",
+                    format:function(d){
+                        if (d.episodes != 1) {
+                            return d.episodes
+                        }else{
+                            return d.type
+                        }}
+                }
+            ]);
+
+        var dataTableRating = dc.dataTable('#data-table-chart-four');
+        dataTableRating
+            .beginSlice(0)
+            .endSlice(1)
+            .dimension(ratingDim)
+            .group(function(d){
+                return 1
+            })
+            .showGroups(false)
+            .columns([
+                {
+                    label: "Rating",
+                    format: function(d){ return d.rating}
+                }
+            ]);
 
 
         dc.renderAll();
