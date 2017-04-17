@@ -15,38 +15,38 @@ Anime_dashboard.py calls index() then The render_template() function redirects t
 
 ### Existing featurs
 - Dashboard features
- - Interactive pie chart
- - Interactive line chart
- - Interactive select menu
- - Data table
+   - Interactive pie chart
+   - Interactive line chart
+   - Interactive select menu
+   - Data table
 - Site features
- - Nav bar Navigation
- - Scrollable data tables
+   - Nav bar Navigation
+   - Scrollable data tables
  
 ### Features left to implement
 - Site features
- Select random anime for user
+   - Select random anime for user
 
 ## Tech Used
 
 ### Tech used includes:
 - [Flask microframework for python](http://flask.pocoo.org/)
- - **Flask** handles page routing, calls to the database and loading libraries.
+  - **Flask** handles page routing, calls to the database and loading libraries.
 - [Bootstrap](http://getbootstrap.com/)
- - **Bootstrap** is used for a simple, responsive layout.
+  - **Bootstrap** is used for a simple, responsive layout.
 - [Keen-dashboard](https://github.com/keen/dashboards)
- - **Keen-dashboard** is used in conjunction with bootstrap for responsive layout
+  - **Keen-dashboard** is used in conjunction with bootstrap for responsive layout
 - [D3](https://d3js.org/)
- - **D3** is used in conjunction with DC to render the charts.
+  - **D3** is used in conjunction with DC to render the charts.
 - [DC](https://dc-js.github.io/dc.js/)
- - **DC** is used in conjunction with D3 to render the charts
+  - **DC** is used in conjunction with D3 to render the charts
 - [Crossfilter](http://square.github.io/crossfilter/)
- - **Crosfilter** is used to sort data.
+  - **Crosfilter** is used to sort data.
 - [Jquery](https://jquery.com/)
- - **Jquery** is used for more interactiveness.
+  - **Jquery** is used for more interactiveness.
  
 ## Contributing
 
 ### Getting the code up and running
-1. First you will need to clone this repository by running the '''git clone <https://github.com/OMC86/anime_dashboard>''' command.
+1. First you will need to clone this repository by running the ```git clone <https://github.com/OMC86/anime_dashboard>``` command.
 2. After that you will need to...
