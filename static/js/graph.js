@@ -80,9 +80,10 @@ $(document).ready(function() {
         //Pie chart
         var pieChart = dc.pieChart("#pie-chart");
         pieChart
-            .width(220)
-            .height(220)
-            .slicesCap(6)
+            .width(240)
+            .height(240)
+            .slicesCap(5)
+            .innerRadius([50])
             .dimension(typeDim)
             .group(typeGroup)
             //.colors(colourScale)

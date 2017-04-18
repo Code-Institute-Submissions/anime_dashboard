@@ -39,16 +39,56 @@ body.application{
 
 
 /*FOOTER*/
-.footer{
+#footer{
     position: absolute;
     width: 100%;
-    padding-top: 5px;
-    margin-top: 50px;
-    background-color: #222;
-    text-align: center;
-    height: 100px;
+    padding-top: 10px;
+    margin-top: 100px;
+    background-color: #222222;
+    height: 200px;
     left: 0;
+}
 
+.footer-div {
+    margin-top: 10px;
+    border-right: 1px solid #9b9b9b;
+}
+
+.footer-other{
+    margin-top: 10px;
+}
+
+.both{
+    border-left: 1px solid #9b9b9b;
+}
+
+#name{
+    font-size: 18px;
+    color: #9b9b9b;
+}
+
+#image-cred{
+    padding-top: 45px;
+}
+
+.foot{
+    padding-top: 10px;
+    font: 12px Avenir Next;
+    color: #9b9b9b
+}
+
+.title{
+    font-size: 21px;
+    color: #9b9b9b;
+}
+
+a{
+    text-decoration: none;
+}
+
+.foto{
+    font: 12px Avenir Next;
+    color: #9b9b9b
 }
 /*FOOTER*/
 
@@ -163,7 +203,7 @@ button:focus{
 }
 
 table td{
-    border: 1px solid #979797;      /*Styles for Table*/
+    border: 1px solid #9b9b9b;      /*Styles for Table*/
     padding: 20px;
     color: #ffffff;
     font: 18px Avenir Next;
@@ -205,10 +245,6 @@ table td{
 
 
 /*ABOUT PAGE*/
-a{
-    text-decoration: none;
-    color: #00c89b;
-}
 .aboutText {
     font: 20px Avenir Next;
     color: #ffffff;
@@ -287,7 +323,7 @@ td{
 
 #pie-chart{
     margin-top: 50px;               /*PIE CHART STYLES*/
-    margin-left: 30px;
+    margin-left: 25px;
 }
 
 #pie-chart svg{
@@ -304,8 +340,13 @@ td{
     stroke: #ffffff;
 }
 
-.dc-chart .selected path{
-    stroke: none;
+#pie-chart path{
+    stroke: #2a2a2a;
+    stroe-width: 1px;
+}
+
+.dc-legend{
+    margin-left: 10px;
 }
 
 
