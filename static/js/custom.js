@@ -26,11 +26,6 @@ $(document).ready(function() {
 
 
 
-//Change select menu event styles
-    $('option').on('click', function() {
-        $(this).css("background-color", 'red');
-    });
-
 
 
 

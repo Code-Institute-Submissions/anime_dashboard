@@ -3,6 +3,10 @@
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-lg-12">
+            <div id="tour">
+                <button class="intro-button" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!</button>
+            </div>
+
         <div class="row">
 
             <!--ANIME LIST SELECT MENU-->
@@ -10,7 +14,9 @@
                 <div class="table-wrapper">
                     <div class="chart-title">Results For</div>
                     <div class="table-stage stage">
-                        <div id="data-table-chart-one" class="data"></div>
+                        <div id="data-table-chart-one" class="data" data-step="2" data-intro="After you choose an anime from the select menu,
+                                you will be able to see it's information here."
+                             style="font-weight: normal" data-position="right"></div>
                     </div>
                     <div class="table-stage stage">
                         <div id="data-table-chart-two" class="data"></div>
@@ -33,7 +39,9 @@
                             <div class="pie-wrapper">
                                 <div class="chart-title">Anime Type</div>
                                 <div class="pie-stage stage">
-                                    <div id="pie-chart"></div>
+                                    <div id="pie-chart" data-step="3" data-intro="Cllick on a slice in this pie chart
+                                    to select which type of anime you would like to look at."
+                             style="font-weight: normal" data-position="right"></div>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +53,11 @@
                             <div class="select-wrapper">
                                 <div class="chart-title">Select Menur</div>
                                 <div class="select-stage stage">
-                                    <div id="select-chart"></div>
+                                    <div id="select-chart" data-step="1" data-intro="Here is your select menu.
+                                    Interacting with the other charts will filter the results you see here. Scroll through
+                                    the list of anime titles and click the one you would like to know more about. To undo selections
+                                    from any of the other charts, scroll to the top of this menu and click 'select all'."
+                                            style="font-weight: normal" data-position="left"></div>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +84,10 @@
                             <div class="line-chart-wrapper">
                                 <div class="chart-title">Popularity Compared with Average Rating</div>
                                 <div class="line-stage stage">
-                                    <div id="line-chart"></div>
+                                    <div id="line-chart" data-step="4" data-intro="Click and drag on the line chart to select the range of
+                                    ratings you would like to see in the select menu. This chart also tells you how popular an anime is by
+                                     the number of members who have joined it's respective fan 'group'"
+                                            style="font-weight: normal" data-position="left"></div>
                                 </div>
                             </div>
                         </div>

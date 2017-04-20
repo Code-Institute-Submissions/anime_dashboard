@@ -21,7 +21,6 @@ $(document).ready(function() {
         var ndx = crossfilter(animeData);
         var size = ndx.size();
 
-
         //Dimensions
         var membersDim = ndx.dimension(function (d) {
             return d.members;
@@ -47,6 +46,21 @@ $(document).ready(function() {
         var animeByRating = nameDim.group().reduceSum(function(d){return d.rating});
         //Group data by type
         var typeGroup = typeDim.group();
+
+
+        //Select a random anime for home page button
+        var top = nameDim.top(size);
+        var randFunc = function(){
+            var randAnime = top[Math.floor(Math.random() * size)];
+            return(randAnime);
+        }
+        //Home page random pick button
+        $("#random").click(function(){
+            randFunc();
+        });
+
+        //Home page random table
+
 
 
         //Line Chart
