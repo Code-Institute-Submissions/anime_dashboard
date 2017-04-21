@@ -25,7 +25,7 @@ Anime_dashboard.py calls index() then The render_template() function redirects t
  
 ### Features left to implement
 - Site features
-   - Select random anime for user
+   - Display random anime on homepage after click event
 
 ## Tech Used
 
@@ -44,7 +44,8 @@ Anime_dashboard.py calls index() then The render_template() function redirects t
   - **Crosfilter** is used to sort data.
 - [Jquery](https://jquery.com/)
   - **Jquery** is used for more interactiveness.
- 
+- [Intro](http://introjs.com/)
+  - **Intro** is used for the step by step guide feature on the dashboard.
 ## Contributing
 
 ### Getting the code up and running
