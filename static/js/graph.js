@@ -48,19 +48,6 @@ $(document).ready(function() {
         var typeGroup = typeDim.group();
 
 
-        //Select a random anime for home page button
-        var top = nameDim.top(size);
-        var randFunc = function(){
-            var randAnime = top[Math.floor(Math.random() * size)];
-            return(randAnime);
-        }
-        //Home page random pick button
-        $("#random").click(function(){
-            randFunc();
-        });
-
-        //Home page random table
-
 
 
         //Line Chart
@@ -86,7 +73,7 @@ $(document).ready(function() {
             .multiple(true)
             .controlsUseVisibility(true)
             .order(function(a,b){
-                return a.value > b.value ? -1 : b.value > a.value ? 1 : 0;
+                return a.value > b.value ? -1 : b.value > a.value ? 1 : 0; //Link to stack overflow
             });
 
 

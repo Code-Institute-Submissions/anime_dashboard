@@ -72,13 +72,24 @@
                 <div class="xs-col-12 col-sm-6 col-md-6 col-lg-6">
                     <button id="random" type="button" class="homepagebtn">LUCKY DIP
                     </button>
-                    <div id="random-table">
-
-                    </div>
+                </div>
+            </div>
+                <div class="row">
+                <div class="col-lg-10">
+                     <div class="random-chart-wrapper">
+                          <div class="chart-title">Select Menur</div>
+                         <div class="box">
+                             <div id="random-table"></div>
+                         </div>
+                     </div>
+                </div>
+                </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script></script>
+
+    <script src="{{ url_for ('static', filename='js/home.js')}}"></script>
+
 {% endblock %}

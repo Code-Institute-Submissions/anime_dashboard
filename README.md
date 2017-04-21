@@ -49,7 +49,7 @@ Anime_dashboard.py calls index() then The render_template() function redirects t
 
 ### Getting the code up and running
 1. First you will need to clone this repository by running the ```git clone <https://github.com/OMC86/anime_dashboard>``` command and install the modules listed in the requirements.txt file.
-2. After that download the anime.csv file from [kaggle](https://www.kaggle.com/CooperUnion/anime-recommendations-database).
+2. The anime.csv file has been included in this repository but if you would like to take a look at the origonal, you can find it at [kaggle](https://www.kaggle.com/CooperUnion/anime-recommendations-database).
 3. Next if you don't have mongo, install [MongoDb document database](https://www.mongodb.com/download-center#production).
 4. Once you have installed and configured mongo, upload anime.csv to mogodb with the following command ```mongoimport -d animeData -c anime --type csv --file anime.csv --headerline```
 4. You will need to have mongodb running in order to retrive data for the charts
