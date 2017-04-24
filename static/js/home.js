@@ -35,30 +35,31 @@ $(document).ready(function() {
 
         animeData.forEach(function (d) {
             d.rating = +d.rating;
+            d.members = +d.members;
         });
 
         //Crossfilter Instance
         var ndx = crossfilter(animeData);
         var size = ndx.size();
 
-        var nameDim = ndx.dimension(function (d) {
-            return d.name;
+        var membersDim = ndx.dimension(function (d) {
+            return d.members;
         });
 
         //Select a random anime for home page button
-        var top = nameDim.top(size);
+        var top = membersDim.top(size);
         var randFunc = function () {
             var randAnime = top[Math.floor(Math.random() * size)];
-            return(randAnime);
+            return randAnime;
         };
         //Home page random pick button
-        $("#random").on('click', function () {
+        //$("#random").on('click', function () {
 
             var randArray = [randFunc()];
 
             var dataTableRandom = dc.dataTable('#random-table');
             dataTableRandom
-                .dimension(nameDim)
+                .dimension(membersDim)
                 .group(randArray)
                 //.showGroups(false)
                 .columns([
@@ -67,29 +68,11 @@ $(document).ready(function() {
                         format: function (d) {
                             return d.name
                         }
-                    },
-                    {
-                        label: "Rating",
-                        format: function (d) {
-                            return d.rating
-                        }
-                    },
-                    {
-                        label: "Genre",
-                        format: function (d) {
-                            return d.genre
-                        }
-                    },
-                    {
-                        label: "Type",
-                        format: function (d) {
-                            return d.type
-                        }
                     }
                 ]);
 
             //$('#random-table').toggle();
-        });
+       // });
 
     }
 

@@ -1,0 +1,32 @@
+.pie-stage{
+    height: 340px;
+}
+
+#pie-chart{
+    margin-top: 50px;               /*PIE CHART STYLES*/
+    margin-left: 25px;
+}
+
+#pie-chart svg{
+    width: 320px;
+    height: 280px;
+}
+
+.pie-slice-group{
+    margin-top: 30px;
+}
+
+.pie-label{
+    font: 16px Avenir Next;
+    stroke: #ffffff;
+}
+
+#pie-chart path{
+    stroke: #2a2a2a;
+    stroke-width: 1px;
+}
+
+.dc-legend{
+
+}
+

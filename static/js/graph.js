@@ -19,13 +19,8 @@ $(document).ready(function() {
 
         //Crossfilter Instance
         var ndx = crossfilter(animeData);
-        var size = ndx.size();
 
         //Dimensions
-        var membersDim = ndx.dimension(function (d) {
-            return d.members;
-        });
-
         var ratingDim = ndx.dimension(function (d) {
             return d.rating;
         });
@@ -41,9 +36,26 @@ $(document).ready(function() {
 
 
         //Group data by members
-        var animeByMembers = ratingDim.group().reduceSum(function(d){return d.members});
+        var animeByMembers = ratingDim.group().reduce(
+            function(p,v){return v.members;},
+            function(p,v){return v.members;},
+            function(){return 0;}
+        );
+
         //Group data by rating
-        var animeByRating = nameDim.group().reduceSum(function(d){return d.rating});
+        var animeByRating = nameDim.group().reduce(
+            function(ratings, v) {
+                ratings.push(v.rating);
+                return ratings;
+            },
+            function(ratings, v){
+                var ratingIndex = ratings.indexOf(v.rating);
+                ratings.splice(ratingIndex, 1);
+                return ratings;
+            },
+            function(){return [];});
+
+
         //Group data by type
         var typeGroup = typeDim.group();
 
@@ -70,6 +82,7 @@ $(document).ready(function() {
         selectMenu
             .dimension(nameDim)
             .group(animeByRating)
+            .valueAccessor(function(ratings){return ratings.value[0];})
             .multiple(true)
             .controlsUseVisibility(true)
             .order(function(a,b){
@@ -108,8 +121,8 @@ $(document).ready(function() {
                 }
             ]);
 
-        var dataTableGenre = dc.dataTable('#data-table-chart-two');
-        dataTableGenre
+        var dataTableRating = dc.dataTable('#data-table-chart-two');
+        dataTableRating
             .beginSlice(0)
             .endSlice(1)
             .dimension(ratingDim)
@@ -119,14 +132,18 @@ $(document).ready(function() {
             .showGroups(false)
             .columns([
                  {
-                    label: "Rating:",
+                    label: "Rating",
                     format: function(d){ return d.rating}
+                },
+                {
+                    label: "Members",
+                    format: function(d){ return d.members}
                 }
             ]);
 
 
-        var dataTableEp = dc.dataTable('#data-table-chart-three');
-        dataTableEp
+        var dataTableGenre = dc.dataTable('#data-table-chart-three');
+        dataTableGenre
             .beginSlice(0)
             .endSlice(1)
             .dimension(ratingDim)
@@ -146,8 +163,8 @@ $(document).ready(function() {
                 }
             ]);
 
-        var dataTableRating = dc.dataTable('#data-table-chart-four');
-        dataTableRating
+        var dataTableEpisodes = dc.dataTable('#data-table-chart-four');
+        dataTableEpisodes
             .beginSlice(0)
             .endSlice(1)
             .dimension(ratingDim)
@@ -164,7 +181,7 @@ $(document).ready(function() {
                         }else{
                             return d.type
                         }}
-                }
+                },
             ]);
 
 
@@ -184,8 +201,6 @@ $(document).ready(function() {
         }
         AddXAxis(lineChart, "Rating");
 
-
-        window.ratingObject = membersDim;
 
         //Assign maximum members to a variable
         /*  var maxMembers = d3.max(animeData, function(d){return d.members;});

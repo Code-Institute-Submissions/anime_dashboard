@@ -1,0 +1,18 @@
+.table-stage{
+    height: 185px;
+}
+
+.data {
+                                    /*DATA TABLE STYLES*/
+    font: 21px Avenir Next;
+    color: #ffffff;
+}
+
+th{
+    padding: 10px;
+}
+
+td{
+    padding: 20px;
+
+}

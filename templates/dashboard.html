@@ -3,29 +3,33 @@
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-lg-12">
-            <div id="tour">
-                <button class="intro-button" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!</button>
-            </div>
+        <div id="tour">
+            <button class="intro-button" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!</button>
+        </div>
 
         <div class="row">
 
             <!--ANIME LIST SELECT MENU-->
-            <div class="col-xs-12 col-sm-3 col-lg-3">
+            <div class="col-xs-12 col-sm-6 col-lg-3">
                 <div class="table-wrapper">
-                    <div class="chart-title">Results For</div>
+                    <div class="chart-title">Results For
+                    </div>
                     <div class="table-stage stage">
                         <div id="data-table-chart-one" class="data" data-step="2" data-intro="After you choose an anime from the select menu,
                                 you will be able to see it's information here."
                              style="font-weight: normal" data-position="right"></div>
                     </div>
                     <div class="table-stage stage">
-                        <div id="data-table-chart-two" class="data"></div>
+                        <div id="data-table-chart-two" class="data">
+                        </div>
                     </div>
                     <div class="table-stage stage">
-                        <div id="data-table-chart-three" class="data"></div>
+                        <div id="data-table-chart-three" class="data">
+                        </div>
                     </div>
                     <div class="table-stage stage">
-                        <div id="data-table-chart-four" class="data"></div>
+                        <div id="data-table-chart-four" class="data">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -33,9 +37,9 @@
 
 
              <!--PIE CHART-->
-             <div class="col-xs-12 col-sm-9 col-lg-9">
+             <div class="col-xs-12 col-sm-6 col-lg-9">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-5 col-lg-5">
+                        <div class="col-xs-12 col-sm-12 col-lg-5">
                             <div class="pie-wrapper">
                                 <div class="chart-title">Anime Type</div>
                                 <div class="pie-stage stage">
@@ -49,7 +53,7 @@
 
 
             <!--SELECT MENU-->
-                        <div class="col-xs-12 col-sm-7 col-lg-7">
+                        <div class="col-sm-12 col-lg-7">
                             <div class="select-wrapper">
                                 <div class="chart-title">Select Menur</div>
                                 <div class="select-stage stage">
@@ -82,7 +86,8 @@
                     <div class="row">
                         <div class="col-sm-12 col-lg-12">
                             <div class="line-chart-wrapper">
-                                <div class="chart-title">Popularity Compared with Average Rating</div>
+                                <div class="chart-title">Popularity Compared with Average Rating
+                                </div>
                                 <div class="line-stage stage">
                                     <div id="line-chart" data-step="4" data-intro="Click and drag on the line chart to select the range of
                                     ratings you would like to see in the select menu. This chart also tells you how popular an anime is by
@@ -95,17 +100,13 @@
                         </div>
                     </div>
             <!--LINE CHART-->
-
             </div>
-
-
-
+        </div>
     </div>
-
-    </div>
-    </div>
+</div>
 
 
 <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+
 {% endblock %}
 

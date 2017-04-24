@@ -10,7 +10,18 @@
     <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
     <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
     <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/introjs.css')}}">
-    <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/home.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/about.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/ref.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/Dashboard/dash-general.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/Dashboard/data-table.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/Dashboard/line-chart.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/Dashboard/pie-chart.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/Dashboard/select-menu.css')}}">
+
+
+
 
 
     <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
@@ -40,7 +51,7 @@
            <ul id="collapse-menu" class="nav navbar-nav navbar-right collapsed navbar-collapse">
                <li class="menu margin"><a href="{{ url_for('home') }}">Home</a></li>
                <li class="menu margin"><a href="{{ url_for('ref') }}">Reference</a></li>
-               <li class="menu"><a href="{{ url_for('about') }}">About</a></li>
+               <li class="menu about"><a href="{{ url_for('about') }}">About</a></li>
            </ul>
        </div>
     </div>
@@ -59,23 +70,22 @@
         <div class="row">
             <div class="cos-sm-12 col-lg-12">
                 <div class="row">
-                    <div class="col-sm-3 col-lg-3">
+                    <div class="col-xs-6 col-sm-3 col-lg-3">
                         <div class="footer-div">
-                            <ul class="title">Anime Dashboard</ul>
+                            <ul class="title no-b">Anime Dashboard</ul>
                             <ul class="foot"><a href="{{ url_for('about') }}">About</a></ul>
                             <ul class="foot"><a href="{{ url_for('home') }}">Home</a></ul>
                             <ul class="foot"><a href="{{ url_for('ref') }}">Reference</a></ul>
-                             <ul class="foto">disclaimer</ul>
                         </div>
                     </div>
-                    <div class="col-sm-3 col-lg-3">
-                        <div class="footer-other">
-                            <ul class="title">Created by</ul>
+                    <div class="col-xs-6 col-sm-3 col-lg-3">
+                        <div id="foot-name-div" class="footer-div">
+                            <ul class="title no-b">Created by</ul>
                             <ul id="name">Chris Toal</ul><br>
                         </div>
                     </div>
-                    <div class="col-sm-3 col-lg-3">
-                        <div class="footer-div both">
+                    <div class="col-xs-6 col-sm-3 col-lg-3">
+                        <div class="footer-div">
                             <ul class="title">Contact</ul>
                             <ul class="foot">E-mail: Christoal@outlook.com</ul>
                             <ul class="foot">Twitter: Chris_T888</ul>
@@ -83,8 +93,8 @@
 
                         </div>
                     </div>
-                     <div class="col-sm-3 col-lg-3">
-                        <div class="footer-other">
+                     <div class="col-xs-6 col-sm-3 col-lg-3">
+                        <div class="footer-div no-right-b">
                             <ul class="title">Sources</ul>
                             <ul class="foto">Home page image via <a href="http://pantallahd.com/fondo-pantalla-bleach-anime-hd/">pantallahd.</a></ul>
                             <ul class="foto">Reference page image via <a href="http://www.playbuzz.com/fiekevermeulen10/do-you-know-those-anime-characters">playbuzz.</a></ul>

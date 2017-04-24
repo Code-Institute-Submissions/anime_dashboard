@@ -1,0 +1,149 @@
+/*index.html*/
+body.application{
+    background: #000000       /*Set background colour for body*/
+}
+
+a{
+    text-decoration: none;
+}
+
+/*NAVBAR*/
+.navbar{
+    font-family: Nanum Brush Script;
+
+}
+
+.navbar-inverse .navbar-brand{
+    font-size: 36px;
+    padding: 20px 10px;
+    color: #ffffff;
+
+}
+
+.navbar-inverse .navbar-brand:hover {
+    text-shadow: 4px 4px 9px #0c85be;
+}
+
+.menu{
+    font-size: 24px;
+    border-bottom: 1px solid #2A2A2A;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.about{
+    border-bottom: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+    text-shadow: 4px 4px 9px #0c85be;
+}
+/*NAVBAR*/
+
+
+/*FOOTER*/
+#footer{
+    position: absolute;
+    width: 100%;
+    padding-top: 10px;
+    margin-top: 100px;
+    background-color: #222;
+    height: 500px;
+    left: 0;
+}
+
+#foot-name-div{
+    height: 200px;
+}
+
+#name{
+    padding-top: 30px;
+    font-size: 18px;
+    color: #9b9b9b;
+}
+
+.foot{
+    padding-top: 10px;
+    font: 12px Avenir Next;
+    color: #9b9b9b;
+}
+
+.title{
+    padding-top: 15px;
+    font-size: 21px;
+    color: #9b9b9b;
+    border-top: 1px solid #2a2a2a;
+}
+
+.no-b{
+    border-top: none;
+}
+
+
+.foto{
+    padding-right: 10px;
+    font: 12px Avenir Next;
+    color: #9b9b9b;
+
+
+}
+/*FOOTER*/
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 430px){   /* min-width for desktop */
+    #footer{
+        height: 450px;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    /*NAVBAR*/
+    .navbar {
+        border-bottom: 1px solid #2a2a2a;
+        border-top: 1px solid #2a2a2a;
+    }
+    .navbar-inverse .navbar-brand{
+        padding-left: 70px;
+        padding-top: 25px;
+    }
+
+    .menu{
+        margin-right: 50px;
+        border-bottom: none;
+    }
+
+    .margin{
+        margin-right: 0;                /*Set margin between menu items*/
+    }
+    /*NAVBAR*/
+
+    /*FOOTER*/
+     #footer{
+        height: 275px;
+    }
+
+    .title{
+        border-top: none;
+    }
+
+    .footer-div{
+        border-right: 1px solid #2a2a2a;
+    }
+
+    .no-right-b{
+        border-right: none;
+    }
+    /*FOOTER*/
+
+}
+
+@media screen and (min-width: 970px){
+    #footer{
+        height: 225px;
+    }
+}

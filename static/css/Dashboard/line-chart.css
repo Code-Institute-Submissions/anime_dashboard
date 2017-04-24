@@ -1,0 +1,24 @@
+.line-stage{
+    height: 377px;
+}
+
+.x-axis-label{
+    font: 15px Avenir Next;        /*line CHART STYLES*/
+    stroke: #9b9b9b;
+}
+
+.axis path,
+.axis line{
+    fill: none;
+    stroke: #9b9b9b;
+    shape-rendering: crispEdges;
+}
+
+svg text{
+    stroke:#9b9b9b;
+}
+
+svg rect + text{
+    font: 10px Avenir Next;
+    stroke: #fff;
+}

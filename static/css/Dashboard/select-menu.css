@@ -1,0 +1,28 @@
+.select-stage{
+    height: 340px;
+}
+
+.dc-chart select{                   /*SELECT MENU STYLES*/
+    width: 100%;
+    height: 340px;
+    background: #2a2a2a;            /*Style the select menu container */
+    border: none;
+}
+
+.dc-select-option{
+    padding: 15px 10px 10px 5px;
+    font: 18px Avenir Next;         /*Style select menu text*/
+    color: #ffffff;
+}
+
+option:first-child{
+    background-color: #9b9b9b ;     /*style 'select all' option from select menu*/
+    color: #FFFFFF;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 768px) {
+
+
+}
