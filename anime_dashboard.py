@@ -41,7 +41,6 @@ def dash():
     return render_template("dashboard.html")
 
 
-
 @app.route("/anime")
 def anime_data():
 

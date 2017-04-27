@@ -46,35 +46,32 @@ $(document).ready(function() {
             return d.members;
         });
 
-        //Select a random anime for home page button
-        var top = membersDim.top(size);
-        var randFunc = function () {
-            var randAnime = top[Math.floor(Math.random() * size)];
-            return randAnime;
-        };
-        //Home page random pick button
-        //$("#random").on('click', function () {
+        //Home page 'lucky dip' button
+        $("#random").on('click', function () {
+
+            //Select a random anime and insert into table
+            var top = membersDim.top(size);
+            var randFunc = function () {
+                var randAnime = top[Math.floor(Math.random() * size)];
+                return randAnime;
+            };
 
             var randArray = [randFunc()];
 
-            var dataTableRandom = dc.dataTable('#random-table');
-            dataTableRandom
-                .dimension(membersDim)
-                .group(randArray)
-                //.showGroups(false)
-                .columns([
-                    {
-                        label: "Title:",
-                        format: function (d) {
-                            return d.name
-                        }
-                    }
-                ]);
+            var tbod = '<tbody>'
+            for (i = 0; i < randArray.length; i++) {
+                tbod += '<tr>';
+                tbod += '<td>' + randArray[i].name + '</td>';
+                tbod += '<td>' + randArray[i].genre + '</td>';
+                tbod += '<td>' + randArray[i].rating + '</td>';
+                tbod += '</tr>';
+            }
+            tbod += '</tbody>';
+            document.getElementById('random-data').innerHTML = tbod;
 
-            //$('#random-table').toggle();
-       // });
+            $('#random-table').toggle();
+
+        });
 
     }
-
-
 });

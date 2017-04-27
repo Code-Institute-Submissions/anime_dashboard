@@ -18,11 +18,22 @@
 option:first-child{
     background-color: #9b9b9b ;     /*style 'select all' option from select menu*/
     color: #FFFFFF;
+    height: 25px;
 }
 
 /*MEDIA QUERIES*/
+@media screen and (min-width: 992px) {
 
-@media screen and (max-width: 768px) {
+}
 
+@media screen and (min-width: 1201px) {
+
+    .select-stage {
+        height: 340px;
+    }
+
+    .dc-chart select{
+        height: 340px;
+    }
 
 }

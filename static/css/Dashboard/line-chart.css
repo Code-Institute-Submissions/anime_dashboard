@@ -1,5 +1,19 @@
-.line-stage{
+.small-line-stage {
+    height: 320px;
+}
+
+.mid-line-stage{
+    height: 335px;
+    display: none;
+}
+
+.big-line-stage{
     height: 377px;
+    display: none;
+}
+
+.line-stage svg{
+    padding-left: 20px;
 }
 
 .x-axis-label{
@@ -21,4 +35,29 @@ svg text{
 svg rect + text{
     font: 10px Avenir Next;
     stroke: #fff;
+}
+
+
+
+@media screen and (min-width: 768px){   /* min-width for desktop */
+
+    .small-line-stage{
+        display: none;
+    }
+
+    .mid-line-stage{
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+
+    .mid-line-stage{
+        display: none;
+    }
+
+    .big-line-stage{
+        display: block;
+    }
 }

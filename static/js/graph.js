@@ -36,12 +36,9 @@ $(document).ready(function() {
 
 
         //Group data by members
-        var animeByMembers = ratingDim.group().reduce(
-            function(p,v){return v.members;},
-            function(p,v){return v.members;},
-            function(){return 0;}
-        );
+         var animeByMembers = ratingDim.group().reduceSum(function(d){return d.members});
 
+        var countAnime = ratingDim.group().reduceCount(function(d){return d.rating})
         //Group data by rating
         var animeByRating = nameDim.group().reduce(
             function(ratings, v) {
@@ -60,20 +57,46 @@ $(document).ready(function() {
         var typeGroup = typeDim.group();
 
 
+       //Line Chart for smaller screen
+        var lineChartSmall = dc.lineChart("#small-line-chart");
+        lineChartSmall
+            .width(340)
+            .height(300)
+            .margins({top: 30, right: 30, bottom: 30, left: 70})
+            .elasticY(true)
+            .dimension(ratingDim)
+            .group(animeByMembers)
+            .renderArea(true)
+            .x(d3.scale.linear().domain([1,10]))
+            .yAxisLabel("Members");
 
 
-        //Line Chart
-        var lineChart = dc.lineChart("#line-chart");
-        lineChart
-            .width(860)
+         //Line Chart for medium screen
+        var lineChartMid = dc.lineChart("#mid-line-chart");
+        lineChartMid
+            .width(750)
+            .height(300)
+            .margins({top: 30, right: 30, bottom: 30, left: 70})
+            .elasticY(true)
+            .dimension(ratingDim)
+            .group(animeByMembers)
+            .renderArea(true)
+            .x(d3.scale.linear().domain([1,10]))
+            .yAxisLabel("Members");
+
+
+
+        //Line Chart for bigger screen
+        var lineChartBig = dc.lineChart("#big-line-chart");
+        lineChartBig
+            .width(850)
             .height(350)
             .margins({top: 30, right: 30, bottom: 30, left: 70})
             .elasticY(true)
             .dimension(ratingDim)
             .group(animeByMembers)
             .renderArea(true)
-            .brushOn(true)
-            .x(d3.scale.linear().domain([0,10]))
+            .x(d3.scale.linear().domain([1,10]))
             .yAxisLabel("Members");
 
 
@@ -184,6 +207,48 @@ $(document).ready(function() {
                 },
             ]);
 
+        var dataTableEpisodes = dc.dataTable('#data-table-chart-small');
+        dataTableEpisodes
+            .beginSlice(0)
+            .endSlice(1)
+            .dimension(ratingDim)
+            .group(function(d){
+                return 1
+            })
+            .showGroups(false)
+            .columns([
+                {
+                    label: "Title:",
+                    format: function(d){ return d.name}
+                },
+                {
+                    label: "Episodes:",
+                    format:function(d){
+                        if (d.episodes != 1) {
+                            return d.episodes
+                        }else{
+                            return d.type
+                        }}
+                },
+                {
+                    label: "Genre:",
+                    format: function(d){
+                        if(d.genre === "") {
+                            return "Unknown"
+                        }else{
+                            return d.genre;
+                        }},
+                },
+                 {
+                    label: "Rating",
+                    format: function(d){ return d.rating}
+                },
+                {
+                    label: "Members",
+                    format: function(d){ return d.members}
+                }
+            ]);
+
 
         dc.renderAll();
 
@@ -199,7 +264,31 @@ $(document).ready(function() {
             .attr("y", lineChartUpdate.height()-3.5)
             .text(displayText);
         }
-        AddXAxis(lineChart, "Rating");
+        AddXAxis(lineChartSmall, "Rating");
+
+         function AddXAxis(lineChartUpdate, displayText) {
+            lineChartUpdate
+            .svg()
+            .append("text")
+            .attr("class", "x-axis-label")
+            .attr("text-anchor", "middle")
+            .attr("x", lineChartUpdate.width()/2)
+            .attr("y", lineChartUpdate.height()-3.5)
+            .text(displayText);
+        }
+        AddXAxis(lineChartMid, "Rating");
+
+          function AddXAxis(lineChartUpdate, displayText) {
+            lineChartUpdate
+            .svg()
+            .append("text")
+            .attr("class", "x-axis-label")
+            .attr("text-anchor", "middle")
+            .attr("x", lineChartUpdate.width()/2)
+            .attr("y", lineChartUpdate.height()-3.5)
+            .text(displayText);
+        }
+        AddXAxis(lineChartBig, "Rating");
 
 
         //Assign maximum members to a variable

@@ -95,6 +95,29 @@ h2{
     height: 100px;
 }
 
+#random-table{
+    display: none;
+}
+
+#home-table{
+    margin: auto;
+}
+
+#home-table td{
+    border: none;
+    color: #FFFFFF;
+}
+
+#home-table th{
+    color: #FFFFFF;
+}
+
+
+#box-bottom{
+    margin: 10px;
+}
+
+
 /*HOME PAGE*/
 
 /*MEDIA QUERIES*/

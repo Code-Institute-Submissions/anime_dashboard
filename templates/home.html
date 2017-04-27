@@ -65,7 +65,7 @@
     <!--THIRD BOX WITH INSTRUCTIONS AND BUTTON THAT CHOOSES AND DISPLAYS A RANDOM ANIME-->
     <div class="row">
         <div class="col-sm-12 col-md-10 col-lg-10 centre">
-            <div class="box img-bottom">
+            <div id="box-bottom" class="box img-bottom">
                 <div class="xs-col-12 col-sm-6 col-md-6 col-lg-6">
                 <p class="boxtext">This button will select an anime at random for you!
                </div>
@@ -74,21 +74,25 @@
                     </button>
                 </div>
             </div>
-                <div class="row">
-                <div class="col-lg-10">
-                     <div class="random-chart-wrapper">
-                          <div class="chart-title">Random Menu</div>
-                         <div class="box">
-                             <div id="random-table"></div>
-                         </div>
-                     </div>
-                </div>
-                </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="random-table">
+                        <table id="home-table">
+                            <thead>
+                                 <tr>
+                                     <th>Name</th>
+                                     <th>Genre</th>
+                                     <th>Rating</th>
+                                 </tr>
+                            </thead>
+                            <tbody id="random-data">
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <script src="{{ url_for ('static', filename='js/home.js')}}"></script>
 

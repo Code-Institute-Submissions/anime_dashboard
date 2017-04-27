@@ -22,10 +22,14 @@ Anime_dashboard.py calls index() then The render_template() function redirects t
 - Site features
    - Nav bar Navigation
    - Scrollable data tables
+   - Random select option
  
-### Features left to implement
+### Features to improve
 - Site features
-   - Display random anime on homepage after click event
+   - I have not been able to find a perfect solution in making the dc charts responsive. This results in some empty space
+   in the chart's svg at some screen sizes. I've tried to mitigate this effect by creating three different line charts with varying widths
+   which will display on media query break points.
+
 
 ## Tech Used
 
@@ -50,7 +54,10 @@ Anime_dashboard.py calls index() then The render_template() function redirects t
 
 ### Getting the code up and running
 1. First you will need to clone this repository by running the ```git clone <https://github.com/OMC86/anime_dashboard>``` command and install the modules listed in the requirements.txt file.
-2. The anime.csv file has been included in this repository but if you would like to take a look at the origonal, you can find it at [kaggle](https://www.kaggle.com/CooperUnion/anime-recommendations-database).
+2. The anime.csv file has been included in this repository but if you would like to take a look at the original, you can find it at [kaggle](https://www.kaggle.com/CooperUnion/anime-recommendations-database).
+- Please note the original csv file form [kaggle](https://www.kaggle.com/CooperUnion/anime-recommendations-database) includes some null values and may need some cleaning for optimal use with Anime Dashboard.
+    - In the 'rating' column I've edited null values to int 0.
+    - I removed 'Music' from the 'type' column.
 3. Next if you don't have mongo, install [MongoDb document database](https://www.mongodb.com/download-center#production).
 4. Once you have installed and configured mongo, upload anime.csv to mogodb with the following command ```mongoimport -d animeData -c anime --type csv --file anime.csv --headerline```
 4. You will need to have mongodb running in order to retrive data for the charts

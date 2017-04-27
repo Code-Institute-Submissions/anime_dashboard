@@ -127,6 +127,10 @@ a{
         height: 275px;
     }
 
+     #name{
+         padding-top: 5px;
+     }
+
     .title{
         border-top: none;
     }

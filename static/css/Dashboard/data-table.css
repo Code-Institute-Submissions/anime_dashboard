@@ -16,3 +16,45 @@ td{
     padding: 20px;
 
 }
+
+@media screen and (min-width: 400px){
+
+
+     .data {                            /*DATA TABLE STYLES*/
+         font-size: 18px;
+         padding: 15px;
+}
+    .small{
+        display: none;
+    }
+
+}
+
+
+@media screen and (min-width: 680px) {
+
+
+    .big {
+        display: none;
+    }
+
+    .small{
+        display: block;
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+
+    .table-stage{
+        display: block;
+    }
+
+     .small{
+        display: none;
+    }
+
+     .big{
+         display: block;
+     }
+}
