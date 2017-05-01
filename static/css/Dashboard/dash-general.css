@@ -1,7 +1,10 @@
 /*DASHBOARD*/
 #tour{
-    margin:20px;
-    margin-left: 0px;
+    display: none;
+}
+
+.tour-class{
+    margin:100px 0px 15px 0px;
 }
 
 .intro-button{
@@ -28,4 +31,22 @@
 
 .stage {
     background: #2a2a2a;
+}
+
+
+@media screen and (min-width: 760px){
+
+    .tour-class{
+        margin-left: 15px;
+    }
+}
+@media screen and (min-width: 1200px){
+
+    #tour{
+        display: block;
+    }
+
+     #tour-small{
+        display: none;
+    }
 }

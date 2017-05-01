@@ -58,6 +58,7 @@ $(document).ready(function() {
 
             var randArray = [randFunc()];
 
+
             var tbod = '<tbody>'
             for (i = 0; i < randArray.length; i++) {
                 tbod += '<tr>';

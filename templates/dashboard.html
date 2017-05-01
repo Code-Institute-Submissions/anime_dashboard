@@ -4,125 +4,132 @@
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-lg-12">
-        <div id="tour">
-            <button class="intro-button" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!</button>
+
+        <!--Intro tour button-->
+        <div id="tour" class="tour-class">
+            <button class="intro-button" type="button" autofocus onclick="javascript:introJs().start();">
+                Start Tour!</button>
+        </div>
+        <!--Instructions tour button for smaller screen-->
+        <div id="tour-small" class="tour-class">
+            <a href="{{ url_for('about') }}"><button class="intro-button" type="button" autofocus>Instructions
+            </button></a>
         </div>
 
 
-
-             <!--LINE CHART-->
+        <!--LINE CHARTS-->
         <div class="row">
             <div class="col-sm-12">
-                <div class="line-chart-wrapper">
-                    <div class="chart-title">
+                <div class="col-sm-12">         <!--Need an extra col for padding due to nested pie and select chart-->
+
+                    <div id="small-title" class="chart-title">Popularity Compared with Average Rating
                     </div>
-                    <div class="small-line-stage stage">
+                    <div id="small-line-stage" class="stage">
                         <div id="small-line-chart">
+
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-12">
-                <div class="line-chart-wrapper">
-                    <div class="chart-title">
+                <div class="col-md-12">
+                    <div id="mid-title" class="chart-title">Popularity Compared with Average Rating
                     </div>
-                    <div class="mid-line-stage stage">
-                        <div id="mid-line-chart"></div>
+                    <div id="mid-line-stage" class="stage">
+                        <div id="mid-line-chart">
+                        </div>
                     </div>
                 </div>
             </div>
+
+            </div>
+
 
             <div class="col-lg-9">
-                <div class="line-chart-wrapper">
-                    <div class="chart-title">Popularity Compared with Average Rating
-                    </div>
-                    <div class="big-line-stage stage">
-                        <div id="big-line-chart"></div>
-                    </div>
+                <div id="big-title" class="chart-title">Popularity Compared with Average Rating
                 </div>
+                    <div id="big-line-stage" class="stage">
+                        <div id="big-line-chart" data-step="1" data-intro="The line chart compares how popular a show is,
+                        by number of members in it's fan group with the average user rating. Click and drag the
+                        chart to select anime with the ratings you want to see."
+                                    style="font-weight: normal" data-position="right">
+                        </div>
+                    </div>
 
 
+                <!--LINE CHART-->
 
 
-                 <!--PIE CHART-->
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-lg-5">
-                    <div class="pie-wrapper">
-                        <div class="chart-title">Anime Type</div>
-                        <div class="pie-stage stage">
-                            <div id="pie-chart" data-step="3" data-intro="Cllick on a slice in this pie chart
-                                    to select which type of anime you would like to look at."
-                             style="font-weight: normal" data-position="right"></div>
+                <!--PIE CHART-->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-lg-5">
+                        <div class="chart-title">Anime Type
+                        </div>
+                        <div id="pie-stage" class="stage">
+                            <div id="pie-chart" data-step="2" data-intro="Click on a slice in the pie chart
+                                    to select which type of anime you would like to look for. If the slice is filled
+                                    with colour, you will be able to see it's respective type in the select menu."
+                                    style="font-weight: normal" data-position="right">
+                            </div>
+                        </div>
+                    </div>
+                    <!--PIE CHART-->
+
+
+                 <!--SELECT MENU-->
+                    <div class="col-sm-6 col-lg-7">
+                        <div class="chart-title">Select Menu
+                        </div>
+                        <div id="select-stage" class="stage">
+                            <div id="select-chart" data-step="3" data-intro="
+                                    Interacting with the pie and line charts will filter the results you see here.
+                                    Scroll through the list of anime and click the one you would like to know more about.
+                                    **To undo selections from the other charts, scroll to the top of this menu and
+                                    click 'select all'.**"
+                                    style="font-weight: normal" data-position="left">
+                            </div>
                         </div>
                     </div>
                 </div>
-            <!--PIE CHART-->
-
-
+            </div>
             <!--SELECT MENU-->
-                <div class="col-sm-6 col-lg-7">
-                    <div class="select-wrapper">
-                        <div class="chart-title">Select Menur</div>
-                        <div class="select-stage stage">
-                            <div id="select-chart" data-step="1" data-intro="Here is your select menu.
-                                    Interacting with the other charts will filter the results you see here. Scroll through
-                                    the list of anime titles and click the one you would like to know more about. To undo selections
-                                    from any of the other charts, scroll to the top of this menu and click 'select all'."
-                                 style="font-weight: normal" data-position="left"></div>
-                        </div>
-                    </div>
+
+
+            <!--DATA TABLE-->
+        <div class="col-lg-3">
+            <div class="chart-title big">Results For
+            </div>
+            <div class="table-stage big stage">
+                <div id="data-table-chart-one" class="data-style" data-step="4" data-intro="After you choose an
+                         anime from the select menu, you will be able to see it's information here."
+                     style="font-weight: normal" data-position="left"></div>
+            </div>
+            <div class="table-stage big stage">
+                <div id="data-table-chart-two" class="data-style">
                 </div>
             </div>
-            </div>
-             <!--SELECT MENU-->
-
-
-
-            <!--LINE CHART-->
-
-            <!--ANIME LIST SELECT MENU-->
-            <div class="col-lg-3">
-                <div class="table-wrapper">
-                    <div class="chart-title big">Results For
-                    </div>
-                    <div class="table-stage big stage">
-                        <div id="data-table-chart-one" class="data" data-step="2" data-intro="After you choose an anime from the select menu,
-                                you will be able to see it's information here."
-                             style="font-weight: normal" data-position="right"></div>
-                    </div>
-                    <div class="table-stage big stage">
-                        <div id="data-table-chart-two" class="data">
-                        </div>
-                    </div>
-                    <div class="table-stage big stage">
-                        <div id="data-table-chart-three" class="data">
-                        </div>
-                    </div>
-                    <div class="table-stage big stage">
-                        <div id="data-table-chart-four" class="data">
-                        </div>
-                    </div>
+            <div class="table-stage big stage">
+                <div id="data-table-chart-three" class="data-style">
                 </div>
             </div>
-
-            <!--ANIME LIST SELECT MENU-->
-
-                    <div class="col-sm-12">
-                        <div class="table-wrapper">
-                            <div class="chart-title small">Results For
-                        </div>
-                        <div class="table-stage small stage">
-                            <div id="data-table-chart-small" class="data" data-step="2" data-intro="After you choose an anime from the select menu,
-                                you will be able to see it's information here."
-                             style="font-weight: normal" data-position="right"></div>
-                        </div>
-                        </div>
-                    </div>
+            <div class="table-stage big stage">
+                <div id="data-table-chart-four" class="data-style">
                 </div>
             </div>
         </div>
+
+        <div class="col-sm-12">
+            <div class="chart-title small">Results For
+            </div>
+            <div class="table-stage small stage">
+                <div id="data-table-chart-small" class="data-style"></div>
+            </div>
+        </div>
     </div>
+             <!--DATA TABLE-->
+</div>
+
 
 
 

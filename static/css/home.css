@@ -1,3 +1,8 @@
+
+#top-header{
+    margin-top: 100px;
+}
+
 .homeheader{
     text-align: center;             /*HOME PAGE WELCOME TEXT*/
     font-family: Avenir Next;
@@ -14,7 +19,7 @@ h2{
 }
 
 .box{
-    background: url('/static/assets/Bleach-280x800.jpg');
+    background: url('/static/assets/Bleach-280x800.jpg');       /*Background image*/
     height: 300px;
     border-radius: 15px;
     margin-bottom: 65px;
@@ -30,7 +35,7 @@ h2{
 }
 
 .homepagebtn{
-    display: block;
+    display: block;                 /*button styles*/
     width: 250px;
     height: 77px;
     margin-top: 35px;
@@ -48,9 +53,6 @@ h2{
     box-shadow: 5px 2px 10px 9px rgba(0,0,0,50), inset 0 0 24px 24px rgba(0,0,0,0.5);
 }
 
-.homepagebtn:hover{
-
-}
 
 .img-top{
     background-position: 50% 0%;   /*Position for background image in box*/
@@ -79,28 +81,28 @@ h2{
 }
 
 .centre{
-    float: none;                    /*Put box in centre*/
+    float: none;                    /*Centre box*/
     margin-left: auto;
     margin-right: auto;
 }
 
 
 .homepagebtn:focus{
-    outline-color: #000;
+    outline-color: #000;            /*Style for button focus*/
     width: 245px;
     height: 70px;
 }
 
-.random{
-    height: 100px;
+.warning{
+    font-size: 12px;
 }
 
 #random-table{
-    display: none;
+    display: none;                  /*Table's wrapper div*/
 }
 
 #home-table{
-    margin: auto;
+    margin: auto;                   /*Table actual styles*/
 }
 
 #home-table td{
@@ -122,7 +124,7 @@ h2{
 
 /*MEDIA QUERIES*/
 
-@media screen and (min-width: 430px){   /* min-width for desktop */
+@media screen and (min-width: 430px){   /* Reset background image for slightly larger screen */
 
     .box{
         height: 250px;
@@ -133,21 +135,21 @@ h2{
 
 }
 
-@media screen and (min-width: 741px){
+@media screen and (min-width: 741px){   /* Reset background image for slightly larger screen */
     .box{
         height: 200px;
     }
     .img-top{
-        background-position: 45% 15%;   /*Position for background image in box*/
+        background-position: 45% 15%;
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px){   /* Reset background image for slightly larger screen */
     .box{
         height: 160px;
     }
     .img-top{
-        background-position: 45% 25%;   /*Position for background image in box*/
+        background-position: 45% 25%;
     }
     .img-middle{
         background-position: 45% 55%;

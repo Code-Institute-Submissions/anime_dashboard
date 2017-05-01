@@ -1,23 +1,31 @@
-.small-line-stage {
-    height: 320px;
+#small-line-stage {
+    height: 320px;              /*Set height for mobile screen and hide larger line charts*/
 }
 
-.mid-line-stage{
+#mid-line-stage{
     height: 335px;
     display: none;
 }
 
-.big-line-stage{
+#big-line-stage{
     height: 377px;
     display: none;
 }
 
+#big-title{
+    display: none;
+}
+
+#mid-title{
+    display: none;
+}
+
 .line-stage svg{
-    padding-left: 20px;
+    padding-left: 20px;          /*line chart style*/
 }
 
 .x-axis-label{
-    font: 15px Avenir Next;        /*line CHART STYLES*/
+    font: 15px Avenir Next;
     stroke: #9b9b9b;
 }
 
@@ -39,25 +47,47 @@ svg rect + text{
 
 
 
-@media screen and (min-width: 768px){   /* min-width for desktop */
+@media screen and (min-width: 768px){
 
-    .small-line-stage{
-        display: none;
+    #small-line-stage{
+        display: none;             /*Display medium line chart, hide small*/
     }
 
-    .mid-line-stage{
+    #mid-line-stage{
         display: block;
+    }
+
+    #mid-title{
+        display: block;
+    }
+
+    #small-title{
+        display: none;
     }
 
 }
 
+@media screen and (min-width: 990px){
+    #mid-line-chart{
+        margin-left: 50px;
+    }
+}
+
 @media screen and (min-width: 1200px){
 
-    .mid-line-stage{
+    #mid-line-stage{
+        display: none;            /*Display large line chart, hide medium*/
+    }
+
+    #big-line-stage{
+        display: block;
+    }
+
+    #mid-title{
         display: none;
     }
 
-    .big-line-stage{
+    #big-title{
         display: block;
     }
 }

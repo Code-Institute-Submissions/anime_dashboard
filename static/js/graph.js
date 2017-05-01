@@ -89,7 +89,7 @@ $(document).ready(function() {
         //Line Chart for bigger screen
         var lineChartBig = dc.lineChart("#big-line-chart");
         lineChartBig
-            .width(850)
+            .width(825)
             .height(350)
             .margins({top: 30, right: 30, bottom: 30, left: 70})
             .elasticY(true)

@@ -2,26 +2,77 @@
 {% block content %}
 
 <div class="row">
-   <div class="col-sm-8 col-lg-8">
-       <div class="aboutText">
-           <h1>About Anime Dashboard</h1>
-           <p>Sometimes choosing an anime to watch can be confusing.
-           <br><br><br>
-           Anime Dashboard makes it easier by showing you all the information you need,
-           in order to choose something you want to watch!
-           <br><br><br>
-           The information focuses on a few important factors. Popularity, average user rating, genre, type (movie, tv etc...) and number of episodes.
-           <br><br><br><br>
-           <h2>About the creator</h2>
+    <div class="col-sm-12 col-lg-12">
 
-       </div>
-   </div>
+        <div id="about-first-para">
+            <div class="about-text">
+                <h1>About Anime Dashboard</h1>
+            </div>
 
-    <div class="col-sm-4 col-lg-4">
-        <div class="aboutImg">
-            <img class="animePic" src="{{ url_for ('static', filename='assets/bleach.jpg')}}">
+            <div class="about-text">
+                <p>Sometimes choosing an anime to watch can be hard work.</p>
+            </div>
+
+            <div class="aboutImg">
+                <img class="animePic" src="{{ url_for ('static', filename='assets/anime-Girl.jpg')}}"
+                     alt="Girl at Computer" >
+            </div>
+
+            <div class="about-text">
+                <p>Anime Dashboard makes it easier by showing you all the information you need,
+                    in order to choose something you want to watch!</p>
+            </div>
+
+            <div class="aboutImg">
+                <img class="animePic" src="{{ url_for ('static', filename='assets/Goku_cheering.jpg')}}"
+                     alt="Goku Cheering" >
+            </div>
+
+            <div class="about-text">
+                <p>The information focuses on a few important factors. Popularity, average user rating, genre, type
+                    (movie, tv etc...) and number of episodes.
+                </p>
+            </div>
         </div>
     </div>
 </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-lg-12">
+            <div id="about-second-para" class="about-text">
+                <h2>The Dashboard Explained</h2>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="instructions about-text">
+                    <p>1. The line chart compares how popular a show is,
+                        by number of members in it's fan group with the average user rating. Click and drag the
+                        chart to select anime with the ratings you want to see.</p>
+                </div>
+           </div>
+           <div class="col-lg-3">
+                <div class="instructions about-text">
+                    <p>2. Click on a slice in the pie chart
+                        to select which type of anime you would like to look for. If the slice is filled
+                        with colour, you will be able to see it's respective type in the select menu.</p>
+                </div>
+           </div>
+
+           <div class="col-lg-3">
+               <div class="instructions about-text">
+                   <p>3. Interacting with the line and pie charts will filter the results in the select menu. Scroll
+                       through the select menu and click the one you would like to know more about. **To undo selections
+                       from any of the other charts, scroll to the top of this menu and click 'select all**'.</p>
+               </div>
+           </div>
+            <div class="col-lg-3">
+                <div class="instructions about-text">
+                    <p> 4. After you choose an anime from the select menu, you will be able to see it's information
+                        in the table.</p>
+                </div>
+           </div>
+        </div>
+    </div>
+
 
 {% endblock %}

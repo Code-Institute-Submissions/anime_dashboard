@@ -1,6 +1,6 @@
 /*index.html*/
 body.application{
-    background: #000000       /*Set background colour for body*/
+    background: #000000                 /*Set background colour for body*/
 }
 
 a{
@@ -9,7 +9,7 @@ a{
 
 /*NAVBAR*/
 .navbar{
-    font-family: Nanum Brush Script;
+    font-family: Nanum Brush Script;    /*Nav styles*/
 
 }
 
@@ -47,12 +47,12 @@ a{
 
 /*FOOTER*/
 #footer{
-    position: absolute;
+    position: absolute;                /*Footer styles*/
     width: 100%;
     padding-top: 10px;
     margin-top: 100px;
     background-color: #222;
-    height: 500px;
+    height: 525px;
     left: 0;
 }
 
@@ -67,7 +67,7 @@ a{
 }
 
 .foot{
-    padding-top: 10px;
+    padding-top: 10px;                /*Style for footer text*/
     font: 12px Avenir Next;
     color: #9b9b9b;
 }
@@ -80,12 +80,12 @@ a{
 }
 
 .no-b{
-    border-top: none;
+    border-top: none;               /*Remove border for 'created by' and site map*/
 }
 
 
 .foto{
-    padding-right: 10px;
+    padding-right: 10px;            /*Style for sources text*/
     font: 12px Avenir Next;
     color: #9b9b9b;
 
@@ -94,9 +94,9 @@ a{
 /*FOOTER*/
 
 /*MEDIA QUERIES*/
-@media screen and (min-width: 430px){   /* min-width for desktop */
+@media screen and (min-width: 430px){
     #footer{
-        height: 450px;
+        height: 500px;
     }
 }
 
@@ -104,8 +104,7 @@ a{
 
     /*NAVBAR*/
     .navbar {
-        border-bottom: 1px solid #2a2a2a;
-        border-top: 1px solid #2a2a2a;
+        border: 1px solid #2a2a2a;      /*Style for nav bar on large screen*/
     }
     .navbar-inverse .navbar-brand{
         padding-left: 70px;
@@ -124,7 +123,7 @@ a{
 
     /*FOOTER*/
      #footer{
-        height: 275px;
+        height: 300px;                  /*Style for footer on large screen*/
     }
 
      #name{
@@ -148,6 +147,12 @@ a{
 
 @media screen and (min-width: 970px){
     #footer{
-        height: 225px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #footer{
+        height: 260px;
     }
 }

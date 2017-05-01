@@ -1,8 +1,8 @@
-.select-stage{
-    height: 340px;
+#select-stage{
+    height: 340px;                  /*SELECT MENU STYLES*/
 }
 
-.dc-chart select{                   /*SELECT MENU STYLES*/
+.dc-chart select{
     width: 100%;
     height: 340px;
     background: #2a2a2a;            /*Style the select menu container */
@@ -16,17 +16,14 @@
 }
 
 option:first-child{
-    background-color: #9b9b9b ;     /*style 'select all' option from select menu*/
+    font-size: 21px;
+    text-align: center;             /*style 'select all' option*/
     color: #FFFFFF;
     height: 25px;
 }
 
-/*MEDIA QUERIES*/
-@media screen and (min-width: 992px) {
 
-}
-
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1200px) {
 
     .select-stage {
         height: 340px;

@@ -1,15 +1,51 @@
 /*ABOUT PAGE*/
-.aboutText {
+
+#about-first-para{
+    margin-top: 100px;
+}
+
+.about-img{
+    margin-bottom: 25px;
+}
+
+.about-text {
     font: 20px Avenir Next;
     color: #ffffff;
-    margin-top: 50px;
-    margin-right: 20px;
+    padding:25px;
+    text-align: center;
+}
+
+.about-text h2{
+    margin-top: 35px;
+    margin-bottom: 15px;
 }
 
 .animePic{
-    width: 300px;
-    height: 700px;
-    margin-top: 50px;
+    width: 100%;
+    height: 400px;
     object-fit: cover;
+    display: block;
 }
+
 /*ABOUT PAGE*/
+@media screen and (min-width: 558px){   /* Reset background image for slightly larger screen */
+
+.animePic{
+    width: 500px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+}
+
+@media screen and (min-width: 768px){   /* Reset background image for slightly larger screen */
+
+.animePic{
+    width: 600px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+}

@@ -1,10 +1,10 @@
 .table-stage{
-    height: 185px;
+    height: 150px;                  /*Height for data tables*/
 }
 
-.data {
-                                    /*DATA TABLE STYLES*/
-    font: 21px Avenir Next;
+.data-style {
+    padding: 15px;
+    font: 18px Avenir Next;         /*Set font and colour for data tables*/
     color: #ffffff;
 }
 
@@ -14,40 +14,56 @@ th{
 
 td{
     padding: 20px;
-
 }
 
-@media screen and (min-width: 400px){
-
-
-     .data {                            /*DATA TABLE STYLES*/
-         font-size: 18px;
-         padding: 15px;
+.table-stage{
+    display: block;
 }
+
+
+@media screen and (min-width: 300px){
+
     .small{
-        display: none;
+        display: none;              /*Hide small table*/
     }
 
 }
 
 
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 600px) {
+
+    .data-style{
+        font-size: 16px;            /*reset font size for small table*/
+    }
 
 
     .big {
-        display: none;
+        display: none;              /*Hide big table*/
     }
 
     .small{
-        display: block;
+        display: block;             /*Display small table*/
+    }
+
+    #data-table-chart-small{
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 
 @media screen and (min-width: 1200px){
 
+     .data-style{
+        font-size: 21px;            /*reset font size for small table*/
+    }
+
     .table-stage{
-        display: block;
+        height: 185px;              /*Set styles for table on large screen*/
+    }
+
+    .data.style{
+        font-size: 21px;
     }
 
      .small{
