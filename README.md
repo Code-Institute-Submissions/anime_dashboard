@@ -38,8 +38,6 @@ Anime_dashboard.py makes use of the flask framework for routing. First home() is
   - **Flask** handles page routing, calls to the database and loading libraries.
 - [Bootstrap](http://getbootstrap.com/)
   - **Bootstrap** is used for a simple, responsive layout.
-- [Keen-dashboard](https://github.com/keen/dashboards)
-  - **Keen-dashboard** is used in conjunction with bootstrap for responsive layout
 - [D3](https://d3js.org/)
   - **D3** is used in conjunction with DC to render the charts.
 - [DC](https://dc-js.github.io/dc.js/)
