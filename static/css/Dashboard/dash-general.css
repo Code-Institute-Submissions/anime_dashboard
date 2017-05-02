@@ -1,14 +1,14 @@
 /*DASHBOARD*/
 #tour{
-    display: none;
+    display: none;                          /*Hide tour for smaller screens*/
 }
 
 .tour-class{
-    margin:100px 0px 15px 0px;
+    margin:100px 0px 15px 0px;              /*Margin for tour button*/
 }
 
 .intro-button{
-    width: 100px;
+    width: 100px;                            /*Style for tour button*/
     height: 50px;
     background-color: #4A4A4A;
     color: #ffffff;

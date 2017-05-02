@@ -12,14 +12,12 @@
 .ref-box{
     height: 680px;                  /*Wrapper for table*/
     background-color: #2A2A2A;
-    margin-bottom: 50px;
-    margin-right: 10px;
+    margin: 0px 10px 50px 0px;
     overflow-y: scroll;
 }
 
 .table-div{
-    padding-top: 20px;              /*Table padding*/
-    padding-bottom: 20px;
+    padding: 20px 0px 20px 0px;     /*Table padding*/
 }
 
 table td{

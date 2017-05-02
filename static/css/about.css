@@ -30,22 +30,22 @@
 /*ABOUT PAGE*/
 @media screen and (min-width: 558px){   /* Reset background image for slightly larger screen */
 
-.animePic{
-    width: 500px;
-    margin-left:auto;
-    margin-right: auto;
-}
-
-
+    .animePic{
+        width: 500px;
+        margin-left:auto;
+        margin-right: auto;
+    }
 }
 
 @media screen and (min-width: 768px){   /* Reset background image for slightly larger screen */
 
-.animePic{
-    width: 600px;
-    margin-left:auto;
-    margin-right: auto;
-}
+    .animePic{
+        width: 600px;
+        margin-left:auto;
+        margin-right: auto;
+    }
 
-
+    .about-page-btn{
+        margin: auto;
+    }
 }

@@ -47,28 +47,32 @@ a{
 
 /*FOOTER*/
 #footer{
-    position: absolute;                /*Footer styles*/
+    position: absolute;                 /*Footer styles*/
     width: 100%;
     padding-top: 10px;
     margin-top: 100px;
     background-color: #222;
-    height: 525px;
+    height: 900px;
     left: 0;
 }
 
-#foot-name-div{
+#flex-container{                        /*Flex box*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.flex-item{
+    width: 300px;
     height: 200px;
 }
 
 #name{
-    padding-top: 30px;
+    padding-top: 15px;                 /*style footer text*/
     font-size: 18px;
-    color: #9b9b9b;
-}
-
-.foot{
-    padding-top: 10px;                /*Style for footer text*/
-    font: 12px Avenir Next;
     color: #9b9b9b;
 }
 
@@ -79,22 +83,21 @@ a{
     border-top: 1px solid #2a2a2a;
 }
 
-.no-b{
-    border-top: none;               /*Remove border for 'created by' and site map*/
-}
-
-
-.foto{
-    padding-right: 10px;            /*Style for sources text*/
+.foot{
+    padding-top: 10px;
     font: 12px Avenir Next;
     color: #9b9b9b;
+}
 
-
+.foto{
+    padding: 10px 10px 0px 0px;
+    font: 12px Avenir Next;
+    color: #9b9b9b;
 }
 /*FOOTER*/
 
 /*MEDIA QUERIES*/
-@media screen and (min-width: 430px){
+@media screen and (min-width: 600px){
     #footer{
         height: 500px;
     }
@@ -104,7 +107,7 @@ a{
 
     /*NAVBAR*/
     .navbar {
-        border: 1px solid #2a2a2a;      /*Style for nav bar on large screen*/
+        border: 1px solid #2a2a2a;
     }
     .navbar-inverse .navbar-brand{
         padding-left: 70px;
@@ -121,38 +124,11 @@ a{
     }
     /*NAVBAR*/
 
-    /*FOOTER*/
-     #footer{
-        height: 300px;                  /*Style for footer on large screen*/
-    }
-
-     #name{
-         padding-top: 5px;
-     }
-
-    .title{
-        border-top: none;
-    }
-
-    .footer-div{
-        border-right: 1px solid #2a2a2a;
-    }
-
-    .no-right-b{
-        border-right: none;
-    }
-    /*FOOTER*/
-
 }
 
-@media screen and (min-width: 970px){
-    #footer{
-        height: 300px;
-    }
-}
 
 @media screen and (min-width: 1200px){
     #footer{
-        height: 260px;
+        height: 300px;
     }
 }

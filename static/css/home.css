@@ -4,7 +4,7 @@
 }
 
 .homeheader{
-    text-align: center;             /*HOME PAGE WELCOME TEXT*/
+    text-align: center;                                           /*HOME PAGE WELCOME TEXT*/
     font-family: Avenir Next;
     color: #ffffff;
     margin-top: 50px;
@@ -14,8 +14,13 @@ h1{
     padding-bottom: 10px;
 }
 
-h2{
+.disclaimer{
     margin-bottom: 50px;
+    text-align: center;
+    color: #ffffff;
+    font: 16px Avenir Next;
+
+
 }
 
 .box{
@@ -26,16 +31,15 @@ h2{
 }
 
 .boxtext{
-    padding-top: 25px;              /*text styles*/
+    padding-top: 25px;                                          /*text styles*/
     text-align: center;
-    font-family: Avenir Next;
-    font-size: 26px;
+    font: 26px Avenir Next;
     color: #ffffff;
 
 }
 
 .homepagebtn{
-    display: block;                 /*button styles*/
+    display: block;                                             /*button styles*/
     width: 250px;
     height: 77px;
     margin-top: 35px;
@@ -66,10 +70,11 @@ h2{
     background-position: 50% 100%;
 }
 
- .hover-top{
+.hover-top{
      transition: 5s;
      background-position: 100% 100%;  /*transition for background image in box*/
  }
+
 .hover-mid{
     transition: 5s;
     background-position: 0% 85%;
