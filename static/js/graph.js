@@ -36,9 +36,8 @@ $(document).ready(function() {
 
 
         //Group data by members
-         var animeByMembers = ratingDim.group().reduceSum(function(d){return d.members});
+        var animeByMembers = ratingDim.group().reduceSum(function(d){return d.members});
 
-        var countAnime = ratingDim.group().reduceCount(function(d){return d.rating})
         //Group data by rating
         var animeByRating = nameDim.group().reduce(
             function(ratings, v) {
