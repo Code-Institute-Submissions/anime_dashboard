@@ -1,1 +1,1 @@
-web: gunicorn anime_dashboardh:app
+web: gunicorn anime_dashboard:app
