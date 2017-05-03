@@ -68,26 +68,28 @@ svg rect + text{
 }
 
 @media screen and (min-width: 990px){
-    #mid-line-chart{
-        margin-left: 50px;
-    }
-}
-
-@media screen and (min-width: 1200px){
-
-    #mid-line-stage{
-        display: none;            /*Display large line chart, hide medium*/
-    }
 
     #big-line-stage{
         display: block;
+        padding-left: 25px;
+    }
+
+    #big-title{
+        display: block;
+    }
+
+    #mid-line-stage{
+        display: none;
     }
 
     #mid-title{
         display: none;
     }
+}
 
-    #big-title{
-        display: block;
+@media screen and (min-width: 1200px){
+
+   #big-line-stage{
+        padding-left: 5px;
     }
 }

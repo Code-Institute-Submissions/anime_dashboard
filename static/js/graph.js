@@ -74,7 +74,7 @@ $(document).ready(function() {
          //Line Chart for medium screen
         var lineChartMid = dc.lineChart("#mid-line-chart");
         lineChartMid
-            .width(750)
+            .width(700)
             .height(300)
             .margins({top: 30, right: 30, bottom: 30, left: 70})
             .elasticY(true)
@@ -83,7 +83,6 @@ $(document).ready(function() {
             .renderArea(true)
             .x(d3.scale.linear().domain([1,10]))
             .yAxisLabel("Members");
-
 
 
         //Line Chart for bigger screen
