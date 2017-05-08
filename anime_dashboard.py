@@ -6,10 +6,8 @@ import os
 
 app = Flask(__name__)
 
-MONGODB_HOST = 'ds129651.mlab.com:29651'
-MONGODB_PORT = 29651
 MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://localhost:27017')
-DBS_NAME = os.getenv('heroku_c217lm9k', 'animeData')
+DBS_NAME = os.getenv('MONGO_DB_NAME', 'animeData')
 COLLECTION_NAME = 'anime'
 
 
