@@ -62,8 +62,7 @@ def anime_data():
         # Define which collection we wish to access
         collection = conn[DBS_NAME][COLLECTION_NAME]
         # Retrieve a result set only with the fields defined in FIELDS
-
-        anime = collection.find(projection=FIELDS).sort([('rating', -1)])
+        anime = collection.find({'type': { '$ne': ['Game', 'Music']} }, projection=FIELDS)
         # Convert anime to a list in a JSON object and return the JSON data
         return json.dumps(list(anime))
 
