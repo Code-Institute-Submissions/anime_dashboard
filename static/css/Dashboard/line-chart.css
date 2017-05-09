@@ -22,6 +22,7 @@
 
 .line-stage svg{
     padding-left: 20px;          /*line chart style*/
+    height: 355px;
 }
 
 .x-axis-label{

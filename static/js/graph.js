@@ -107,7 +107,7 @@ $(document).ready(function() {
             .multiple(true)
             .controlsUseVisibility(true)
             .order(function(a,b){
-                return a.value > b.value ? -1 : b.value > a.value ? 1 : 0; //Link to stack overflow
+                return a.value > b.value ? -1 : b.value > a.value ? 1 : 0;
             });
 
 
@@ -257,7 +257,7 @@ $(document).ready(function() {
             .attr("class", "x-axis-label")
             .attr("text-anchor", "middle")
             .attr("x", lineChartUpdate.width()/2)
-            .attr("y", lineChartUpdate.height()-3.5)
+            .attr("y", lineChartUpdate.height()-0.5)
             .text(displayText);
         }
         AddXAxis(lineChartSmall, "Rating");
@@ -268,7 +268,7 @@ $(document).ready(function() {
             .append("text")
             .attr("class", "x-axis-label")
             .attr("text-anchor", "middle")
-            .attr("x", lineChartUpdate.width()/2)
+            .attr("x", lineChartUpdate.width()/2 + 25)
             .attr("y", lineChartUpdate.height()-3.5)
             .text(displayText);
         }
@@ -280,7 +280,7 @@ $(document).ready(function() {
             .append("text")
             .attr("class", "x-axis-label")
             .attr("text-anchor", "middle")
-            .attr("x", lineChartUpdate.width()/2)
+            .attr("x", lineChartUpdate.width()/2 + 25)
             .attr("y", lineChartUpdate.height()-3.5)
             .text(displayText);
         }

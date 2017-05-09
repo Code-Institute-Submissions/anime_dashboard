@@ -2,8 +2,13 @@
 .ref-header{
     font-family: Avenir Next;       /*Reference page Titles*/
     color: #9b9b9b;
-
+    margin-top: 100px;
 }
+
+.sub{
+    margin-top: 25px;
+}
+
 .wrapper{
     height: 680px;                  /*Wrapper for boxes*/
     background-color: #2A2A2A;
