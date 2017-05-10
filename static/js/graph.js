@@ -8,7 +8,7 @@ $(document).ready(function() {
         .await(makeGraphs);
 
 
-        //Retrieve data
+    //Retrieve data
     function makeGraphs(error, animeData) {
 
         animeData.forEach(function (d) {
