@@ -64,6 +64,26 @@ table td{
     font-size: 17px;
     color: white;
 }
+
+.tooltip{
+    position:absolute;
+    left:-9999px;
+    background-color:#2a2a2a;
+    padding:5px;
+    border:2px solid #9b9b9b;
+    width:250px;
+}
+
+
+.tooltip p{
+    margin:0;
+    padding:10px;
+    color:#fff;
+    background-color:#000;
+    font-size: 16px;
+    font-family: Avenir Next;
+
+}
 /*REFERENCE PAGE*/
 
 @media screen and (min-width: 741px){
