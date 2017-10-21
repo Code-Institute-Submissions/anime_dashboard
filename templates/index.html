@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport content=width=device-width, initial-scale=1">
-    <meta name="description" content="Find information on anime using our dahsboard">
     <title>Anime Dashboard</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta name="description" content="Find information on anime using our dahsboard">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
     <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/introjs.css')}}">
@@ -32,7 +32,7 @@
 
 <!--NAV BAR-->
 <header>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
        <div class="container-fluid">
            <div class="navbar-header">
                <a class="navbar-brand" href="dash">Anime Dashboard</a>
@@ -49,7 +49,7 @@
                <li class="menu about"><a href="{{ url_for('about') }}">About</a></li>
            </ul>
        </div>
-    </div>
+    </nav>
 </header>
 <!--NAV BAR-->
 
@@ -69,35 +69,42 @@
                     <div id="flex-container">
 
                         <div class="flex-item">
-                            <ul class="title">Anime Dashboard</ul>
-                            <ul class="foot"><a href="{{ url_for('about') }}">About</a></ul>
-                            <ul class="foot"><a href="{{ url_for('home') }}">Home</a></ul>
-                            <ul class="foot"><a href="{{ url_for('ref') }}">Reference</a></ul>
-                            <ul class="foot"><a href="{{ url_for('dash') }}">Dashboard</a></ul>
+                            <ul>
+                                <li class="title">Anime Dashboard</li>
+                                <li class="foot"><a href="{{ url_for('about') }}">About</a></li>
+                                <li class="foot"><a href="{{ url_for('home') }}">Home</a></li>
+                                <li class="foot"><a href="{{ url_for('ref') }}">Reference</a></li>
+                                <li class="foot"><a href="{{ url_for('dash') }}">Dashboard</a></li>
+                            </ul>
                         </div>
 
 
                         <div class="flex-item">
-                            <ul class="title">Created by</ul>
-                            <ul id="name">Chris Toal</ul><br>
+                            <ul>
+                                <li class="title">Created by</li>
+                                <li id="name">Chris Toal</li><br>
+                            </ul>
                         </div>
 
 
                         <div class="flex-item">
-                            <ul class="title">Contact</ul>
-                            <ul class="foot">E-mail: Christoal@outlook.com</ul>
-                            <ul class="foot">Twitter: Chris_T888</ul>
-                            <ul class="foot">Github: OMC86</ul>
-
+                            <ul>
+                                <li class="title">Contact</li>
+                                <li class="foot">E-mail: Christoal@outlook.com</li>
+                                <li class="foot">Twitter: Chris_T888</li>
+                                <li class="foot">Github: OMC86</li>
+                            </ul>
                         </div>
 
                         <div class="flex-item">
-                            <ul class="title">Sources</ul>
-                            <ul class="foot">Home page image via <a href="http://pantallahd.com/fondo-pantalla-bleach-anime-hd/">pantallahd.</a></ul>
-                            <ul class="foot">Reference page image via <a href="http://www.playbuzz.com/fiekevermeulen10/do-you-know-those-anime-characters">playbuzz.</a></ul>
-                            <ul class="foot">About page image 1 via <a href="http://hdwall.us/anime/tablets-oekaki-musume-desktop-hd-wallpaper-460903/">hdwall.</a>image 2 via <a href="http://dragonball.wikia.com/wiki/File:Goku_cheering.png">dragonball.wikia.</a></ul>
-                            <ul class="foot">Data via <a href="https://www.kaggle.com/CooperUnion/anime-recommendations-database">Kaggle</a></ul>
-                            <ul class="foot">Definitions via<a href="https://reelrundown.com/animation/Anime-Genre-List">Reelrundown</a></ul>
+                            <ul>
+                                <li class="title">Sources</li>
+                                <li class="foot">Home page image via <a href="http://pantallahd.com/fondo-pantalla-bleach-anime-hd/">pantallahd.</a></li>
+                                <li class="foot">Reference page image via <a href="http://www.playbuzz.com/fiekevermeulen10/do-you-know-those-anime-characters">playbuzz.</a></li>
+                                <li class="foot">About page image 1 via <a href="http://hdwall.us/anime/tablets-oekaki-musume-desktop-hd-wallpaper-460903/">hdwall.</a>image 2 via <a href="http://dragonball.wikia.com/wiki/File:Goku_cheering.png">dragonball.wikia.</a></li>
+                                <li class="foot">Data via <a href="https://www.kaggle.com/CooperUnion/anime-recommendations-database">Kaggle</a></li>
+                                <li class="foot">Definitions via<a href="https://reelrundown.com/animation/Anime-Genre-List">Reelrundown</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
