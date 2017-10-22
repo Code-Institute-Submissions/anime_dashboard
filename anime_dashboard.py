@@ -49,20 +49,23 @@ def anime_data():
     MongoDB in JSON format.
     """
 
-    # A constant that defines the record fields that we wish to retrieve.
+    # The record fields to retrieve.
     FIELDS = {
         '_id': False, 'name': True,
         'genre': True, 'type': True, 'episodes': True,
         'rating': True, 'members': True
     }
 
-    # Open a connection to MongoDB using a with statement such that the
-    # connection will be closed as soon as we exit the with statement
+    # Open a connection to MongoDB using a with statement
+    # Connection will be closed as soon as we exit the with statement
     with MongoClient(MONGO_URI) as conn:
         # Define which collection we wish to access
         collection = conn[DBS_NAME][COLLECTION_NAME]
-        # Retrieve a result set, filter type field and retrieve only the fields defined in FIELDS
-        anime = collection.find({'type': { '$in': ['Movie', 'TV', 'OVA', 'ONA', 'Special']} }, projection=FIELDS)
+        # Retrieve a result set, filter type field, retrieve only the fields listed below
+        #  limit the number of retrieved fields to 6000
+        anime = collection.find({
+            'type': {
+                '$in': ['Movie', 'TV', 'OVA', 'ONA', 'Special']}}, projection=FIELDS, limit=6000)
         # Convert anime to a list in a JSON object and return the JSON data
         return json.dumps(list(anime))
 

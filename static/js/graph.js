@@ -178,7 +178,7 @@ $(document).ready(function() {
                             return "Unknown"
                         }else{
                             return d.genre;
-                        }},
+                        }}
                 }
             ]);
 
@@ -200,7 +200,7 @@ $(document).ready(function() {
                         }else{
                             return d.type
                         }}
-                },
+                }
             ]);
 
         var dataTableEpisodes = dc.dataTable('#data-table-chart-small');
@@ -233,7 +233,7 @@ $(document).ready(function() {
                             return "Unknown"
                         }else{
                             return d.genre;
-                        }},
+                        }}
                 },
                  {
                     label: "Rating",
@@ -286,5 +286,5 @@ $(document).ready(function() {
         }
         AddXAxis(lineChartBig, "Rating");
 
-    };
+    }
 });
