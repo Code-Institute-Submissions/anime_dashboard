@@ -66,7 +66,7 @@ $(document).ready(function() {
             .dimension(ratingDim)
             .group(animeByMembers)
             .renderArea(true)
-            .x(d3.scale.linear().domain([1,10]))
+            .x(d3.scale.linear().domain([5,10]))
             .yAxisLabel("Members");
 
 
@@ -80,7 +80,7 @@ $(document).ready(function() {
             .dimension(ratingDim)
             .group(animeByMembers)
             .renderArea(true)
-            .x(d3.scale.linear().domain([1,10]))
+            .x(d3.scale.linear().domain([5,10]))
             .yAxisLabel("Members");
 
 
@@ -94,7 +94,7 @@ $(document).ready(function() {
             .dimension(ratingDim)
             .group(animeByMembers)
             .renderArea(true)
-            .x(d3.scale.linear().domain([1,10]))
+            .x(d3.scale.linear().domain([5,10]))
             .yAxisLabel("Members");
 
 
