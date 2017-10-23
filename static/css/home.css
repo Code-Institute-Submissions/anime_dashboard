@@ -5,7 +5,7 @@
 
 .homeheader{
     text-align: center;                                           /*HOME PAGE WELCOME TEXT*/
-    font-family: Avenir Next;
+    font-family: "Raleway", sans-serif;
     color: #ffffff;
     margin-top: 50px;
 }
@@ -18,8 +18,7 @@ h1{
     margin-bottom: 50px;
     text-align: center;
     color: #ffffff;
-    font: 16px Avenir Next;
-
+    font: 16px "Raleway", sans-serif;
 
 }
 
@@ -33,7 +32,7 @@ h1{
 .boxtext{
     padding-top: 25px;                                          /*text styles*/
     text-align: center;
-    font: 26px Avenir Next;
+    font: 26px "Raleway", sans-serif;
     color: #ffffff;
 
 }
@@ -47,7 +46,7 @@ h1{
     margin-right: auto;
     background-color: #4A4A4A;
     color: #ffffff;
-    font-family: Nanum Brush Script;
+    font-family: "Nanum Brush Script", 'Gloria Hallelujah', cursive;
     font-size: 36px;
     text-align: center;
     padding-top: 15px;
@@ -176,5 +175,9 @@ h1{
     .hover-bottom{
         transition: 5s;
         background-position: 0% 0%;
+    }
+
+    p.boxtext{
+        padding-top: 40px;
     }
 }

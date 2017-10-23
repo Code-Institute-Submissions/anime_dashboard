@@ -25,15 +25,7 @@
 }
 
 .x-axis-label{
-    font: 15px Avenir Next;
-    stroke: #9b9b9b;
-}
-
-.axis path,
-.axis line{
-    fill: none;
-    stroke: #9b9b9b;
-    shape-rendering: crispEdges;
+    font: 15px "Raleway", sans-serif;
 }
 
 svg text{
@@ -41,8 +33,7 @@ svg text{
 }
 
 svg rect + text{
-    font: 10px Avenir Next;
-    stroke: #fff;
+    font: 10px "Raleway", sans-serif;
 }
 
 

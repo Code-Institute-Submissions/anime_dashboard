@@ -1,6 +1,6 @@
 /*REFERENCE PAGE*/
 .ref-header{
-    font-family: Avenir Next;       /*Reference page Titles*/
+    font-family: "Raleway", sans-serif; /*Reference page Titles*/
     color: #9b9b9b;
     margin-top: 100px;
 }
@@ -29,7 +29,7 @@ table td{
     border: 1px solid #9b9b9b;      /*Styles for Table*/
     padding: 20px;
     color: #ffffff;
-    font: 16px Avenir Next;
+    font: 16px "Raleway", sans-serif;
 }
 
 #genre-table{
@@ -60,7 +60,7 @@ table td{
 
 .genre-list{
     padding: 20px 40px 20px 40px;
-    font-family: Avenir Next;
+    font-family: "Raleway", sans-serif;
     font-size: 17px;
     color: white;
 }
@@ -81,7 +81,7 @@ table td{
     color:#fff;
     background-color:#000;
     font-size: 16px;
-    font-family: Avenir Next;
+    font-family: "Raleway", sans-serif;
 
 }
 /*REFERENCE PAGE*/

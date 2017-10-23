@@ -11,7 +11,7 @@
 
 .dc-select-option{
     padding: 15px 10px 10px 5px;
-    font: 18px Avenir Next;         /*Style select menu text*/
+    font: 18px "Raleway", sans-serif;         /*Style select menu text*/
     color: #ffffff;
 }
 

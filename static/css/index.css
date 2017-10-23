@@ -9,7 +9,7 @@ a{
 
 /*NAVBAR*/
 .navbar{
-    font-family: Nanum Brush Script;    /*Nav styles*/
+    font-family: 'Nanum Brush Script', 'Gloria Hallelujah', cursive;   /*Nav styles*/
 
 }
 
@@ -89,7 +89,7 @@ ul li{                                 /*remove bullet points*/
 
 .foot{
     padding-top: 10px;
-    font: 12px Avenir Next;
+    font: 12px "Raleway", sans-serif;
     color: #9b9b9b;
 }
 

@@ -4,7 +4,7 @@
 
 .data-style {
     padding: 15px;
-    font: 18px Avenir Next;         /*Set font and colour for data tables*/
+    font: 18px "Raleway", sans-serif;      /*Set font and colour for data tables*/
     color: #ffffff;
 }
 
