@@ -9,7 +9,7 @@ function ref_tooltip(target, name) {
 
         var my_tooltip = $("#" + name + i);
 
-        if($(this).attr("title") != "" && $(this).attr("title") != "undefined" ){ // checks if there is a title
+        if($(this).attr("title") !== "" && $(this).attr("title") !== "undefined" ){ // checks if there is a title
 
             $(this).removeAttr("title").mouseover(function () {
                 my_tooltip.css({opacity: 0.8, display: "none"}).fadeIn(200);
