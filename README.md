@@ -31,7 +31,9 @@ Anime_dashboard.py makes use of the flask framework for routing. First home() is
 - Site features
    - I have not been able to find a perfect solution in making the dc charts responsive. This results in some empty space
    in the chart's svg at some screen sizes. I've tried to mitigate this effect by creating three different line charts with varying widths
-   which will display on media query break points.
+   which will display on media query break points however this has made loading time slower.
+   - The lucky dip button on the home page might not work if it is pressed too soon after page load. This issue only 
+   seems to arise on the deployed version.
 
 
 ## Tech Used
@@ -51,9 +53,9 @@ Anime_dashboard.py makes use of the flask framework for routing. First home() is
   - **Jquery** is used for more interactiveness.
 - [Intro](http://introjs.com/)
   - **Intro** is used for the step by step guide feature on the dashboard.
-## Contributing
 
-### Getting the code up and running
+
+## Getting the code up and running
 1. First you will need to clone this repository by running the ```git clone <https://github.com/OMC86/anime_dashboard>``` command and install the modules listed in the requirements.txt file.
 2. The anime.csv file has been included in this repository but if you would like to take a look at the original, you can find it at [kaggle](https://www.kaggle.com/CooperUnion/anime-recommendations-database).
 - Please note the original csv file form [kaggle](https://www.kaggle.com/CooperUnion/anime-recommendations-database) includes some null values and may need some cleaning for optimal use with Anime Dashboard.
