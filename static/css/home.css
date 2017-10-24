@@ -58,6 +58,15 @@ h1{
     box-shadow: 5px 2px 10px 9px rgba(0,0,0,50), inset 0 0 24px 24px rgba(0,0,0,0.5);
 }
 
+a.homepagebtn:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+button.homepagebtn{
+    padding-bottom: 20px;
+}
+
 
 .img-top{
     background-position: 50% 0%;   /*Position for background image in box*/
