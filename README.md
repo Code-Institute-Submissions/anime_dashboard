@@ -55,6 +55,26 @@ Anime_dashboard.py makes use of the flask framework for routing. First home() is
   - **Intro** is used for the step by step guide feature on the dashboard.
 
 
+## Testing
+Some of the validation tests I used include
+- [W3C](http://validator.w3.org/)
+    - **W3C** validates html.
+- [jigsaw](https://jigsaw.w3.org)
+    - **Jigsaw** validates css
+- [pep8](http://pep8online.com/)
+    - **pep8** validates python code
+- [jshint](http://jshint.com/)
+    - **jshint** validates javascript
+
+A lot of my testing was aided by the chrome developer javascript console. I used the console to read errors which
+helped me fix code. I also created a test.js file in which I wrote and edited functions to later incorporate into
+ my staging files. Unfortunately I deleted this file so am unable to show you.
+ 
+ To make sure my dashboard was working as expected I would render the project in the browser and use each chart to determine
+ if the expected behavior was occurring. If there was an issue I went back to the code and made amendments mostly 
+ through trial and error until i got the expected behaviour 
+ 
+
 ## Getting the code up and running
 1. First you will need to clone this repository by running the ```git clone <https://github.com/OMC86/anime_dashboard>``` command and install the modules listed in the requirements.txt file.
 2. The anime.csv file has been included in this repository but if you would like to take a look at the original, you can find it at [kaggle](https://www.kaggle.com/CooperUnion/anime-recommendations-database).
